@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        @@include("./components/head.html",{
+        "title" : "Вакансии отрасли"
+        })
+    </head>
+    
+    <body>
+        
+        <!--HEADER-->
+        @@include('./components/header.html')
+        <!-- end of HEADER-->
+        
+        <!--MAIN-->
+        <main class="main" id="main">
+            <div class="main__inner">
+                <!--main content-->
+                <div class="main__content">
+                    @@include('./components/breadcrumbs.html', {
+                    "current" : "Вакансии отрасли"
+                    })
+                    
+                    <!--vacancy-->
+                    <article class="vacancy">
+                        <div class="vacancy__main-title">
+                            <h1>Вакансии отрасли</h1>
+                        </div>
+                        
+                        <div class="vacancy__list">
+                            
+                            @@loop("./components/vacancy-item.html", [{
+                            "title" : "Ведущий специалист по работе с клиентами"
+                            },{
+                            "title" : "Заместитель директора по работе с клиентами"
+                            },{
+                            "title" : "Ведущий операционист"
+                            },{
+                            "title" : "Логист-экспедитор"
+                            },{
+                            "title" : "Ведущий операционист"
+                            },{
+                            "title" : "Ведущий операционист"
+                            }])
+                            
+                        </div>
+                    </article>
+                    <!-- end of vacancy-->
+                </div>
+                
+                <!--sidebar-->
+                <aside class="main__sidebar">
+    
+                    <button class="red-butn sidebar__butn modal-trigger" type="button" data-target="vacancy-modal">РАЗМЕСТИТЬ СВОЮ ВАКАНСИЮ</button>
+                    
+                    @@include('./components/sidebar-banner.html')
+                    
+                    <!--sidebar magazine-->
+                    @@include('./components/magazine-preview.html',{
+                    "dataDate" : true,
+                    "dataHash" : true,
+                    "pdf": false,
+                    "image":"magazine-preview-1.jpg",
+                    "image2x":"magazine-preview-1@2x.jpg",
+                    "title" : "Свежий номер # 4",
+                    "hash" : "# анализ",
+                    "slideTitleA" : "Жизненный элексир продаж",
+                    "slideTitleB" : "Жизненный элексир"
+                    })
+                    <!-- end of sidebar magazine-->
+                </aside>
+            </div>
+        </main>
+        <!--end of MAIN-->
+        
+        <!--FOOTER-->
+        @@include('./components/footer.html')
+        <!-- end of FOOTER-->
+    </body>
+</html>

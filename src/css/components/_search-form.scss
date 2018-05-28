@@ -1,0 +1,47 @@
+.search {
+    &__form {
+        @include buttonHeight(40px);
+        display: flex;
+        border: 1px solid $inputBorder;
+        background-color: $white;
+    }
+    
+    &__input {
+        position: relative;
+        display: block;
+        width: calc(100% - 44px);
+        height: 38px;
+        padding: 0 15px;
+        margin: 0;
+        font-family: $mainFont;
+        font-size: 16px;
+        font-weight: 400;
+        color: $mainColor;
+        border: none;
+        background: none;
+        outline: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+    }
+    
+    &__butn {
+        position: relative;
+        width: 44px;
+        height: 38px;
+        background: none;
+        
+        svg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 20px;
+            height: 20px;
+            transform: translate3d(-50%, -50%, 0);
+            fill: $gray;
+        }
+        
+        &:hover svg {
+            fill: $theme;
+        }
+    }
+}

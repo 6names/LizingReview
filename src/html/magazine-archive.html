@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        @@include("./components/head.html",{
+        "title" : "Архив журнала"
+        })
+    </head>
+    
+    <body>
+        
+        <!--HEADER-->
+        @@include('./components/header.html')
+        <!-- end of HEADER-->
+        
+        <!--MAIN-->
+        <main class="main" id="main">
+    
+            <!--magazine-->
+            <article class="magazine">
+                <div class="magazine__inner">
+                    @@include('./components/breadcrumbs.html', {
+                    "current" : "Архив журнала"
+                    })
+                    <div class="magazine__main-title">
+                        <h1>Архив журнала</h1>
+                    </div>
+                    
+                    <div class="magazine__list">
+                        <!--magazine-->
+                        @@loop('./components/magazine-preview.html',[{
+                        "dataDate" : true,
+                        "dataHash" : true,
+                        "pdf": false,
+                        "image":"magazine-preview-1.jpg",
+                        "image2x":"magazine-preview-1@2x.jpg",
+                        "title" : "Свежий номер # 4",
+                        "hash" : "# анализ",
+                        "slideTitleA" : "Жизненный элексир продаж",
+                        "slideTitleB" : "Жизненный элексир"
+                        },{
+                        "dataDate" : true,
+                        "dataHash" : true,
+                        "pdf": true,
+                        "image":"magazine-preview-1.jpg",
+                        "image2x":"magazine-preview-1@2x.jpg",
+                        "title" : "Свежий номер # 4",
+                        "hash" : "# анализ",
+                        "slideTitleA" : "Жизненный элексир продаж",
+                        "slideTitleB" : "Жизненный элексир"
+                        }])
+                        <!-- end of magazine-->
+
+                        <!--banner-->
+                        @@include('./components/sidebar-banner.html')
+                        <!--end of banner-->
+
+                        <!--magazine-->
+                        @@loop('./components/magazine-preview.html',[{
+                        "dataDate" : true,
+                        "dataHash" : true,
+                        "pdf": false,
+                        "image":"magazine-preview-1.jpg",
+                        "image2x":"magazine-preview-1@2x.jpg",
+                        "title" : "Свежий номер # 4",
+                        "hash" : "# анализ",
+                        "slideTitleA" : "Жизненный элексир продаж",
+                        "slideTitleB" : "Жизненный элексир"
+                        },{
+                        "dataDate" : true,
+                        "dataHash" : true,
+                        "pdf": true,
+                        "image":"magazine-preview-1.jpg",
+                        "image2x":"magazine-preview-1@2x.jpg",
+                        "title" : "Свежий номер # 4",
+                        "hash" : "# анализ",
+                        "slideTitleA" : "Жизненный элексир продаж",
+                        "slideTitleB" : "Жизненный элексир"
+                        },{
+                        "dataDate" : true,
+                        "dataHash" : true,
+                        "pdf": false,
+                        "image":"magazine-preview-1.jpg",
+                        "image2x":"magazine-preview-1@2x.jpg",
+                        "title" : "Свежий номер # 4",
+                        "hash" : "# анализ",
+                        "slideTitleA" : "Жизненный элексир продаж",
+                        "slideTitleB" : "Жизненный элексир"
+                        },{
+                        "dataDate" : true,
+                        "dataHash" : true,
+                        "pdf": false,
+                        "image":"magazine-preview-1.jpg",
+                        "image2x":"magazine-preview-1@2x.jpg",
+                        "title" : "Свежий номер # 4",
+                        "hash" : "# анализ",
+                        "slideTitleA" : "Жизненный элексир продаж",
+                        "slideTitleB" : "Жизненный элексир"
+                        },{
+                        "dataDate" : true,
+                        "dataHash" : true,
+                        "pdf": false,
+                        "image":"magazine-preview-1.jpg",
+                        "image2x":"magazine-preview-1@2x.jpg",
+                        "title" : "Свежий номер # 4",
+                        "hash" : "# анализ",
+                        "slideTitleA" : "Жизненный элексир продаж",
+                        "slideTitleB" : "Жизненный элексир"
+                        },{
+                        "dataDate" : true,
+                        "dataHash" : true,
+                        "pdf": false,
+                        "image":"magazine-preview-1.jpg",
+                        "image2x":"magazine-preview-1@2x.jpg",
+                        "title" : "Свежий номер # 4",
+                        "hash" : "# анализ",
+                        "slideTitleA" : "Жизненный элексир продаж",
+                        "slideTitleB" : "Жизненный элексир"
+                        }])
+                        <!-- end of magazine-->
+                    </div>
+    
+                    <div class="magazine__more">
+                        <button class="gray-butn" type="button">ПОКАЗАТЬ ЕЩЕ</button>
+                    </div>
+                </div>
+            </article>
+            <!-- end of magazine-->
+        </main>
+        <!--end of MAIN-->
+        
+        <!--FOOTER-->
+        @@include('./components/footer.html')
+        <!-- end of FOOTER-->
+    </body>
+</html>

@@ -1,0 +1,89 @@
+.select {
+    position: relative;
+    
+    &__value {
+        position: relative;
+        @include buttonHeight(40px);
+        width: 100%;
+        padding: 0 20px;
+        margin: 0;
+        font-family: $mainFont;
+        font-size: 16px;
+        font-weight: 400;
+        color: $mainColor;
+        line-height: 38px;
+        border: 1px solid $white;
+        background: $white;
+        outline: none;
+        cursor: pointer;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        
+        &:before {
+            position: absolute;
+            content: '';
+            top: 50%;
+            right: 15px;
+            display: block;
+            width: 10px;
+            height: 6px;
+            transform: translate3d(0, -2px, 0);
+            background: $arrowBg;
+            background-size: 10px 6px;
+            transition: all 0.2s;
+        }
+        
+        &-active:before {
+            transform: translate3d(0, -3px, 0) rotate(180deg);
+        }
+    }
+    
+    &.error {
+        .select__value {
+            border-color: $red;
+        }
+    }
+    
+    &__list {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 100;
+        display: none;
+        width: 100%;
+        max-height: 200px;
+        background: $white;
+        border-radius: 20px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        box-shadow: 0 1px 7px rgba($black, 0.3);
+        
+        &-active {
+            display: block;
+        }
+    }
+    
+    &__option {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 15px;
+        padding-right: 15px;
+        cursor: pointer;
+        transition: all 0.2s;
+        
+        &:hover {
+            background: rgba($black, 0.1);
+        }
+        
+        &-active:hover,
+        &-active {
+            background: $theme;
+            color: $white;
+            cursor: default;
+        }
+        
+        &[data-val="empty"] {
+            display: none;
+        }
+    }
+}

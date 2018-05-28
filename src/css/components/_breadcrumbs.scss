@@ -1,0 +1,36 @@
+.breadcrumbs {
+    display: flex;
+    flex-wrap: wrap;
+    
+    &__item {
+        font-size: 14px;
+        margin-bottom: 10px;
+        
+        &:not(:first-child):before {
+            content: '/';
+            margin-left: 5px;
+            margin-right: 1px;
+        }
+        
+        a {
+            color: $mainColor;
+            
+            &:hover {
+                color: $theme;
+                text-decoration: none;
+            }
+        }
+        
+        &:last-child {
+            a {
+                pointer-events: none;
+            }
+        }
+    }
+    
+    @media only screen and (max-width: 960px) {
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-top: 10px;
+    }
+}

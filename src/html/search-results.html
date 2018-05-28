@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        @@include("./components/head.html",{
+        "title" : "Результаты поиска"
+        })
+    </head>
+    
+    <body>
+        
+        <!--HEADER-->
+        @@include('./components/header.html')
+        <!-- end of HEADER-->
+        
+        <!--MAIN-->
+        <main class="main" id="main">
+            <div class="main__inner">
+                <!--main content-->
+                <div class="main__content">
+                    @@include('./components/breadcrumbs.html', {
+                    "current" : "Результаты поиска"
+                    })
+                    
+                    <!--posts-->
+                    <article class="posts">
+                        <div class="posts__main-title">
+                            <h1>Результаты поиска</h1>
+                        </div>
+                        
+                        <div class="posts__search-request" data-search="Исследование">
+                            Исследование
+                        </div>
+                        
+                        <section class="posts__section">
+                            <div class="posts__section-title"><h2>Мероприятия журнала</h2></div>
+                            <div class="posts__list">
+                                <!--posts items-->
+                                @@loop("./components/search-result.html", [
+                                {
+                                "dataDate": false,
+                                "dataHash": true,
+                                "image":"event-preview-1.jpg",
+                                "image2x":"event-preview-1@2x.jpg",
+                                "hash":"# ИНТЕРВЬЮ НОМЕРА",
+                                "title" : "Гарегин Тосунян Ожидание перемен"
+                                },{
+                                "dataDate": false,
+                                "dataHash": true,
+                                "image":"event-preview-2.jpg",
+                                "image2x":"event-preview-2@2x.jpg",
+                                "hash":"# ИНТЕРВЬЮ НОМЕРА",
+                                "title" : "Гарегин Тосунян Ожидание перемен"
+                                },{
+                                "dataDate": false,
+                                "dataHash": true,
+                                "image":"event-preview-3.jpg",
+                                "image2x":"event-preview-3@2x.jpg",
+                                "hash":"# ИНТЕРВЬЮ НОМЕРА",
+                                "title" : "Гарегин Тосунян Ожидание перемен"
+                                }
+                                ])
+                                <!-- end of posts items-->
+                            </div>
+                        </section>
+                        
+                        <section class="posts__section">
+                            <div class="posts__section-title"><h2>Новости</h2></div>
+                            <div class="posts__list">
+                                <!--posts items-->
+                                @@loop("./components/search-result.html", [
+                                {
+                                "dataDate": false,
+                                "dataHash": true,
+                                "image":"event-preview-5.jpg",
+                                "image2x":"event-preview-5@2x.jpg",
+                                "hash":"# ИНТЕРВЬЮ НОМЕРА",
+                                "title" : "Гарегин Тосунян Ожидание перемен"
+                                }
+                                ])
+                                <!-- end of posts items-->
+                            </div>
+                        </section>
+                        
+                        <section class="posts__section">
+                            <div class="posts__section-title"><h2>Статьи</h2></div>
+                            <div class="posts__list">
+                                <!--posts items-->
+                                @@loop("./components/search-result.html", [
+                                {
+                                "dataDate": false,
+                                "dataHash": true,
+                                "image":"event-preview-7.jpg",
+                                "image2x":"event-preview-7@2x.jpg",
+                                "hash":"# ИНТЕРВЬЮ НОМЕРА",
+                                "title" : "Гарегин Тосунян Ожидание перемен"
+                                }
+                                ])
+                                <!-- end of posts items-->
+                            </div>
+                        </section>
+                    
+                    </article>
+                    <!-- end of posts-->
+                </div>
+                
+                <!--sidebar-->
+                <aside class="main__sidebar">
+                    @@include('./components/sidebar-banner.html')
+                    
+                    <!--sidebar magazine-->
+                    @@include('./components/magazine-preview.html',{
+                    "dataDate" : true,
+                    "dataHash" : true,
+                    "pdf": false,
+                    "image":"magazine-preview-1.jpg",
+                    "image2x":"magazine-preview-1@2x.jpg",
+                    "title" : "Свежий номер # 4",
+                    "hash" : "# анализ",
+                    "slideTitleA" : "Жизненный элексир продаж",
+                    "slideTitleB" : "Жизненный элексир"
+                    })
+                    <!-- end of sidebar magazine-->
+                </aside>
+            </div>
+        </main>
+        <!--end of MAIN-->
+        
+        <!--FOOTER-->
+        @@include('./components/footer.html')
+        <!-- end of FOOTER-->
+    </body>
+</html>

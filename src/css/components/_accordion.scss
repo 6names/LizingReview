@@ -1,0 +1,80 @@
+.accordion {
+    &__section {
+        border-bottom: 1px solid $border;
+    
+        &:first-child {
+            border-top: 1px solid $border;
+        }
+    }
+    
+    &__title {
+        position: relative;
+        display: flex;
+        padding-right: 25px;
+        margin-top: 22px;
+        margin-bottom: 22px;
+        font-size: 26px;
+        cursor: pointer;
+        transition: all 0.2s;
+        
+        &:before {
+            position: absolute;
+            content: '';
+            top: 12px;
+            right: 10px;
+            display: block;
+            width: 12px;
+            height: 8px;
+            transition: all 0.2s;
+            background-image: $arrowBg;
+            background-size: 12px 8px;
+        }
+        
+        &:hover {
+            color: $theme;
+        }
+        
+        &.active {
+            color: $theme;
+            
+            &:before {
+                transform: rotate(180deg);
+            }
+        }
+    }
+    
+    &__content {
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: all 0.15s;
+        border-top: 1px solid transparent;
+        @include previewText;
+        
+        &.active {
+            border-color: $border;
+            max-height: 3000px;
+            opacity: 1;
+            transition: max-height 0.8s, opacity 0.2s;
+        }
+    
+        .article__figure {
+            margin-top: 0;
+        }
+    }
+    
+    @media only screen and (max-width: 960px) {
+        &__title {
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+    }
+    
+    @media only screen and (max-width: 680px) {
+        &__title {
+            font-size: 22px;
+            margin-top: 10px;
+            margin-bottom: 12px;
+        }
+    }
+}

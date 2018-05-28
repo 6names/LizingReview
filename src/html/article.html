@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        @@include("./components/head.html",{
+        "title" : "Страница Статьи"
+        })
+    </head>
+    
+    <body>
+        
+        <!--HEADER-->
+        @@include('./components/header.html')
+        <!-- end of HEADER-->
+        
+        <!--MAIN-->
+        <main class="main" id="main">
+            <div class="main__inner">
+                <!--main content-->
+                <div class="main__content">
+                    @@include('./components/breadcrumbs.html', {
+                    "current" : "Господдержка"
+                    })
+                    
+                    <!--article-->
+                    <article class="article">
+                        <div class="article__title">
+                            <h1>Регионы где есть льготы по налогу задвижимое и недвижимое иммущество</h1>
+                        </div>
+                        
+                        <div class="article__data">
+                            <div class="article__data-item article__data-item_hash">
+                                <svg class="icon-hash"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-hash"></use></svg>
+                                <div class="article__data-label">ГОСПОДДЕРЖКА</div>
+                            </div>
+                            <div class="article__data-item">
+                                <svg class="icon-clock"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-clock"></use></svg>
+                                <time class="article__data-label" datetime="2018-01-01 00:00:00">10 Октября</time>
+                            </div>
+                            <div class="article__data-item">
+                                <svg class="icon-user"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-user"></use></svg>
+                                <div class="article__data-label">Виктор Седаков</div>
+                            </div>
+                            <div class="article__data-item">
+                                <svg class="icon-view"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-view"></use></svg>
+                                <div class="article__data-label">4200</div>
+                            </div>
+                        </div>
+                        
+                        <figure class="article__figure">
+                            <img src="images/main-banner.jpg" srcset="images/main-banner@2x.jpg 2x" alt=""/>
+                            <figcaption class="article__figure-caption">Фото: Владимир Соловьев</figcaption>
+                        </figure>
+                        
+                        <div class="article__content">
+                            <p>Удорожанием в лизинговой сделке называется отношение затраченных сумм к первоначальной стоимости лизингового имущества. Обычно процент удорожания указывается как средний процент удорожания за год.Удорожанием в лизинговой сделке называется отношение затраченных сумм к первоначальной стоимости лизингового имущества. Обычно процент удорожания указывается как средний процент удорожания за год.Удорожанием в лизинговой сделке называется отношение затраченных сумм к первоначальной стоимости лизингового имущества. Обычно процент удорожания указывается как средний процент удорожания за год.</p>
+                            
+                            <h2>Подзаголовок</h2>
+                            <p>Удорожанием в лизинговой сделке называется отношение затраченных сумм к первоначальной стоимости лизингового имущества. Обычно процент удорожания указывается как средний процент удорожания за год.Удорожанием в лизинговой сделке называется отношение затраченных сумм к первоначальной стоимости лизингового имущества. Обычно процент удорожания указывается как средний процент удорожания за год.</p>
+    
+                            <h2>Подзаголовок</h2>
+                            <p>Удорожанием в лизинговой сделке называется отношение затраченных сумм к первоначальной стоимости лизингового имущества. Обычно процент удорожания указывается как средний процент удорожания за год.</p>
+                        </div>
+                    </article>
+                    <!-- end of article-->
+                </div>
+                
+                <!--sidebar-->
+                <aside class="main__sidebar">
+                    @@include('./components/sidebar-banner.html')
+                    
+                    <!--sidebar magazine-->
+                    @@include('./components/magazine-preview.html',{
+                    "dataDate" : true,
+                    "dataHash" : true,
+                    "pdf": false,
+                    "image":"magazine-preview-1.jpg",
+                    "image2x":"magazine-preview-1@2x.jpg",
+                    "title" : "Свежий номер # 4",
+                    "hash" : "# анализ",
+                    "slideTitleA" : "Жизненный элексир продаж",
+                    "slideTitleB" : "Жизненный элексир"
+                    })
+                    <!-- end of sidebar magazine-->
+                </aside>
+            </div>
+        </main>
+        <!--end of MAIN-->
+        
+        <!--FOOTER-->
+        @@include('./components/footer.html')
+        <!-- end of FOOTER-->
+    </body>
+</html>

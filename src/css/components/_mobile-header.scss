@@ -1,0 +1,119 @@
+.header__mobile-button,
+.header__mobile-close {
+    display: none;
+}
+
+@media only screen and (max-width: 1024px) {
+    .header__mobile {
+        position: absolute;
+        top: 45px;
+        right: 0;
+        z-index: 80;
+        width: 0;
+        height: calc(100vh - 45px);
+        padding: 0;
+        overflow: hidden;
+        background: $white;
+        transform: translate3d(320px, 0, 0);
+        transition: transform 0.35s;
+        
+        &.active {
+            width: 100%;
+            max-width: 360px;
+            box-shadow: 0 5px 17px rgba(0, 0, 0, 0.4);
+            transform: translate3d(0, 0, 0);
+            
+            .header__mobile-content {
+                opacity: 1;
+                transform: translate3d(0, 0, 0);
+                transition: transform 0.5s 0.25s, opacity 0.35s 0.2s;
+            }
+            
+            .header__mobile-content {
+                height: auto;
+            }
+        }
+        
+        &-scroll {
+            @include section-scroll;
+        }
+        
+        &-content {
+            @include section-scroll-content;
+            transform: translate3d(20%, 0, 0);
+            opacity: 0;
+            height: 0;
+            overflow: hidden;
+        }
+        
+        &-button {
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 905;
+            display: block;
+            width: 45px;
+            height: 45px;
+            cursor: pointer;
+            border: none;
+            background: none;
+            outline: none;
+            text-indent: -999em;
+            overflow: hidden;
+            -webkit-tap-highlight-color: transparent;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            
+            &:after,
+            &:before {
+                position: absolute;
+                content: '';
+                top: 50%;
+                left: 50%;
+                display: block;
+                width: 16px;
+                height: 2px;
+                background: $white;
+                transform: translate3d(-50%, -50%, 0);
+                transition: transform 0.15s;
+                box-shadow: 0 -7px 0 $white, 0 7px 0 $white;
+            }
+            
+            &.active {
+                &:after,
+                &:before {
+                    box-shadow: 0 0 0 transparent, 0 0 0 transparent;
+                    background-color: $white;
+                }
+                
+                &:after {
+                    left: calc(-50% + 37px);
+                    transform: rotate(-45deg);
+                }
+                
+                &:before {
+                    left: calc(-50% + 37px);
+                    transform: rotate(45deg);
+                }
+            }
+        }
+        
+        &-close {
+            position: fixed;
+            top: 45px;
+            left: 0;
+            z-index: 70;
+            display: block;
+            height: 0;
+            width: 100%;
+            background: transparent;
+            transition: background 0.35s 0.35s;
+            
+            &.active {
+                height: calc(100vh - 45px);
+                background: rgba(100, 100, 100, 0.7);
+            }
+        }
+    }
+}

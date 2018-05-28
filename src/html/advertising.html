@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        @@include("./components/head.html",{
+        "title" : "Рекламодателям"
+        })
+    </head>
+    
+    <body>
+        
+        <!--HEADER-->
+        @@include('./components/header.html')
+        <!-- end of HEADER-->
+        
+        <!--MAIN-->
+        <main class="main" id="main">
+            <div class="main__inner">
+                <!--main content-->
+                <div class="main__content">
+                    @@include('./components/breadcrumbs.html', {
+                    "current" : "Рекламодателям"
+                    })
+                    
+                    <!--advertising-->
+                    <article class="advertising">
+                        <div class="article__title">
+                            <h1>Рекламодателям</h1>
+                        </div>
+                        <div class="advertising__list">
+                            @@loop("./components/advertising-item.html", [{
+                            "title" : "Прайс + система скидок"
+                            },{
+                            "title" : "Техтребования"
+                            },{
+                            "title" : "Сроки дедлайна"
+                            },{
+                            "title" : "Прайс + система скидок"
+                            }])
+                        </div>
+                    </article>
+                    <!-- end of advertising-->
+                </div>
+                
+                <!--sidebar-->
+                <aside class="main__sidebar">
+                    @@include('./components/sidebar-advertising.html')
+                    @@include('./components/sidebar-banner.html')
+                </aside>
+            </div>
+        </main>
+        <!--end of MAIN-->
+        
+        <!--FOOTER-->
+        @@include('./components/footer.html')
+        <!-- end of FOOTER-->
+    </body>
+</html>

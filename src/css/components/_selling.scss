@@ -1,0 +1,167 @@
+.selling {
+    &__main-title {
+        @include pageTitle;
+    }
+    
+    @media only screen and (max-width: 960px) {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+.selling__item {
+    position: relative;
+    padding-left: 203px;
+    border-bottom: 1px solid $border;
+    border-top: 1px solid transparent;
+    
+    &:first-child {
+        border-top-color: $border;
+    }
+    
+    &-image {
+        position: absolute;
+        top: 31px;
+        left: 0;
+        width: 150px;
+        
+        img {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            height: auto;
+        }
+        
+        &-caption {
+            position: relative;
+            z-index: 2;
+            margin-top: 8px;
+            font-size: 14px;
+            color: $lightColor;
+        }
+    }
+    
+    &-title {
+        position: relative;
+        padding-right: 25px;
+        margin-top: 24px;
+        margin-bottom: 22px;
+        font-size: 26px;
+        cursor: pointer;
+        transition: all 0.2s;
+        
+        &:before {
+            position: absolute;
+            content: '';
+            top: 10px;
+            right: 10px;
+            display: block;
+            width: 12px;
+            height: 8px;
+            transition: all 0.2s;
+            background-image: $arrowBg;
+            background-size: 12px 8px;
+        }
+        
+        &:hover {
+            color: $theme;
+        }
+        
+        &.active {
+            color: $theme;
+            
+            &:before {
+                transform: rotate(180deg);
+            }
+        }
+    }
+    
+    &-data {
+        display: flex;
+        padding-bottom: 30px;
+        font-size: 14px;
+        border-bottom: 1px solid $border;
+        
+        &-item {
+            padding-right: 10px;
+            
+            mark {
+                color: $lighterColor;
+            }
+        }
+        
+    }
+    
+    &-contacts {
+        padding-top: 22px;
+        padding-bottom: 25px;
+        line-height: 1.5em;
+    }
+    
+    &-content {
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: all 0.15s;
+        border-top: 1px solid transparent;
+        @include previewText;
+        
+        &.active {
+            padding-top: 23px;
+            padding-bottom: 34px;
+            border-color: $border;
+            max-height: 3000px;
+            opacity: 1;
+            transition: max-height 0.8s, opacity 0.2s;
+        }
+    }
+    
+    @media only screen and (max-width: 680px) {
+        padding-left: 0;
+        
+        &-image {
+            position: relative;
+            top: 0;
+            width: 100%;
+            margin-bottom: 15px;
+            
+            &-caption {
+                position: absolute;
+                top: 0;
+                left: 10px;
+            }
+        }
+        
+        &-title {
+            font-size: 22px;
+            margin-top: 8px;
+            margin-bottom: 14px;
+        }
+        
+        &-data {
+            flex-wrap: wrap;
+            padding-bottom: 15px;
+            
+            &-item {
+                &:last-child {
+                    width: 100%;
+                    margin-top: 12px;
+                }
+            }
+        }
+        
+        &-contacts {
+            font-size: 14px;
+            line-height: 1.8em;
+            padding-top: 16px;
+            padding-bottom: 13px;
+        }
+        
+        &-content {
+            &.active {
+                padding-top: 15px;
+                padding-bottom: 20px;
+            }
+        }
+    }
+}

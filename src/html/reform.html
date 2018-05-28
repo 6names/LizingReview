@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        @@include("./components/head.html",{
+        "title" : "Реформа"
+        })
+    </head>
+    
+    <body>
+        
+        <!--HEADER-->
+        @@include('./components/header.html')
+        <!-- end of HEADER-->
+        
+        <!--MAIN-->
+        <main class="main" id="main">
+            <div class="main__inner">
+                <!--main content-->
+                <div class="main__content">
+                    @@include('./components/breadcrumbs.html', {
+                    "current" : "Реформа"
+                    })
+                    
+                    <!--news-->
+                    <article class="news">
+                        <div class="news__main-title">
+                            <h1>Реформа</h1>
+                        </div>
+    
+                        <div class="news__list">
+                            <!--news items-->
+                            @@loop("./components/news-preview.html", [
+                            {
+                            "dataDate": true,
+                            "dataHash": false,
+                            "image":"news-preview-1.jpg",
+                            "image2x":"news-preview-1@2x.jpg",
+                            "title" : "Журнал «Лизинг ревю» на форуме нефтяников"
+                            },{
+                            "dataDate": true,
+                            "dataHash": false,
+                            "image":"news-preview-2.jpg",
+                            "image2x":"news-preview-2@2x.jpg",
+                            "title" : "12 вертолетов будут переданы ГТЛК"
+                            },{
+                            "dataDate": true,
+                            "dataHash": false,
+                            "image":"news-preview-1.jpg",
+                            "image2x":"news-preview-1@2x.jpg",
+                            "title" : "Журнал «Лизинг ревю» на форуме нефтяников"
+                            },{
+                            "dataDate": true,
+                            "dataHash": false,
+                            "image":"news-preview-2.jpg",
+                            "image2x":"news-preview-2@2x.jpg",
+                            "title" : "12 вертолетов будут переданы ГТЛК"
+                            }
+                            ])
+                            <!-- end of news items-->
+
+                            @@include('./components/content-banner.html')
+
+                            <!--news items-->
+                            @@loop("./components/news-preview.html", [
+                            {
+                            "dataDate": true,
+                            "dataHash": false,
+                            "image":"news-preview-1.jpg",
+                            "image2x":"news-preview-1@2x.jpg",
+                            "title" : "Журнал «Лизинг ревю» на форуме нефтяников"
+                            },{
+                            "dataDate": true,
+                            "dataHash": false,
+                            "image":"news-preview-2.jpg",
+                            "image2x":"news-preview-2@2x.jpg",
+                            "title" : "12 вертолетов будут переданы ГТЛК"
+                            },{
+                            "dataDate": true,
+                            "dataHash": false,
+                            "image":"news-preview-1.jpg",
+                            "image2x":"news-preview-1@2x.jpg",
+                            "title" : "Журнал «Лизинг ревю» на форуме нефтяников"
+                            },{
+                            "dataDate": true,
+                            "dataHash": false,
+                            "image":"news-preview-2.jpg",
+                            "image2x":"news-preview-2@2x.jpg",
+                            "title" : "12 вертолетов будут переданы ГТЛК"
+                            }
+                            ])
+                            <!-- end of news items-->
+                        </div>
+    
+                        <div class="news__more">
+                            <button class="gray-butn" type="button">ПОКАЗАТЬ ЕЩЕ</button>
+                        </div>
+                    </article>
+                    <!-- end of news-->
+                </div>
+                
+                <!--sidebar-->
+                <aside class="main__sidebar">
+                    @@include('./components/sidebar-banner.html')
+                    
+                    <!--sidebar magazine-->
+                    @@include('./components/magazine-preview.html',{
+                    "dataDate" : true,
+                    "dataHash" : true,
+                    "pdf": false,
+                    "image":"magazine-preview-1.jpg",
+                    "image2x":"magazine-preview-1@2x.jpg",
+                    "title" : "Свежий номер # 4",
+                    "hash" : "# анализ",
+                    "slideTitleA" : "Жизненный элексир продаж",
+                    "slideTitleB" : "Жизненный элексир"
+                    })
+                    <!-- end of sidebar magazine-->
+
+                    @@include('./components/sidebar-banner.html')
+                </aside>
+            </div>
+        </main>
+        <!--end of MAIN-->
+        
+        <!--FOOTER-->
+        @@include('./components/footer.html')
+        <!-- end of FOOTER-->
+    </body>
+</html>

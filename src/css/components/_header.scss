@@ -1,0 +1,190 @@
+.header {
+    position: relative;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 60;
+    min-width: 320px;
+    
+    &__top {
+        @include inner();
+        display: flex;
+        justify-content: space-between;
+        padding-left: 195px;
+    }
+    
+    &__logo {
+        @include inner();
+        z-index: 2;
+        height: 0;
+        
+        &-holder {
+            position: absolute;
+            top: 0;
+            left: 30px;
+    
+            &:after,
+            &:before {
+                position: absolute;
+                content: '';
+                top: 0;
+                left: 0;
+                z-index: 2;
+                display: block;
+                width: 148px;
+                height: 93px;
+                background-image: $logoBg;
+                background-size: 148px 93px;
+                opacity: 0.5;
+                transition: all 0.5s 1s;
+        
+                .loaded & {
+                    transform: translate3d(0, 9px, 0);
+                }
+            }
+    
+            &:after {
+                z-index: 1;
+                opacity: 0.1;
+                transition: all 0.5s 1.5s;
+        
+                .loaded & {
+                    transform: translate3d(0, 18px, 0);
+                }
+            }
+        }
+        
+        &-link {
+            position: relative;
+            z-index: 3;
+            display: block;
+            width: 148px;
+            height: 73px;
+            padding-top: 17px;
+            padding-left: 18px;
+            background-color: $theme;
+            
+            &:before {
+                position: absolute;
+                content: '';
+                top: 100%;
+                left: 0;
+                display: block;
+                width: 0;
+                height: 0;
+                border-left: 74px solid transparent;
+                border-right: 74px solid transparent;
+                border-top: 20px solid $theme;
+            }
+        }
+    }
+    
+    &__right {
+        display: flex;
+        margin-top: 28px;
+        margin-left: 17px;
+        opacity: 0;
+        transition: opacity 0.2s 0.5s;
+    
+        .loaded & {
+            opacity: 1;
+        }
+        
+        [class*="-butn"] {
+            padding-left: 25px;
+            padding-right: 25px;
+            
+            &:not(:first-child) {
+                margin-left: 17px;
+            }
+        }
+    }
+    
+    &__search {
+        max-width: 552px;
+        margin-top: 28px;
+        margin-left: auto;
+        margin-right: auto;
+        flex: 1 1;
+        opacity: 0;
+        transition: opacity 0.2s 0.5s;
+    
+        .loaded & {
+            opacity: 1;
+        }
+    }
+    
+    @media only screen and (max-width: 1024px) {
+        position: fixed;
+        height: 45px;
+        background: $theme;
+    
+        &__logo {
+            height: 45px;
+            
+            &-holder {
+                position: relative;
+                left: 0;
+                
+                &:after,
+                &:before {
+                    display: none;
+                }
+            }
+        
+        
+            &-link {
+                width: 71px;
+                display: flex;
+                align-items: center;
+                height: 45px;
+                padding-top: 2px;
+                padding-left: 0;
+                background: none;
+            
+                &:before {
+                    display: none;
+                }
+                
+                img {
+                    width: 71px;
+                    height: 28px;
+                }
+            }
+        }
+        
+        &__top {
+            display: block;
+        }
+    
+        &__search {
+            max-width: 552px;
+            margin-top: 21px;
+            margin-left: 0;
+            margin-right: 0;
+            margin-bottom: 21px;
+        }
+    
+        &__right {
+            margin-top: 21px;
+            margin-left: 0;
+            justify-content: space-between;
+        
+            [class*="-butn"] {
+                flex: 1 1;
+                padding-left: 5px;
+                padding-right: 5px;
+            
+                &:not(:first-child) {
+                    margin-left: 10px;
+                }
+            }
+        }
+        
+        &__nav {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
+

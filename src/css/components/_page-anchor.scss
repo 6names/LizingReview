@@ -1,0 +1,42 @@
+.page-anchor {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 40;
+    display: block;
+    width: 60px;
+    height: 60px;
+    padding-top: 14px;
+    background: $white;
+    text-align: center;
+    font-size: 14px;
+    color: $lightColor;
+    border-radius: 50%;
+    opacity: 0;
+    transition: color 0.5s, opacity 0.5s;
+    
+    &__text {
+        display: block;
+    }
+    
+    svg {
+        display: inline-block;
+        width: 14px;
+        height: 14px;
+        fill: $theme;
+    }
+    
+    &.active {
+        opacity: 1;
+    }
+    
+    &:hover {
+        color: $theme;
+        text-decoration: none;
+    }
+    
+    @media only screen and (max-width: 1024px) {
+        right: 15px;
+        bottom: 15px;
+    }
+}

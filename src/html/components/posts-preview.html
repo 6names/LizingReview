@@ -1,0 +1,20 @@
+<div class="posts-preview">
+    <div class="posts-preview__image">
+        <img src="images/@@image" srcset="images/@@image2x 2x" alt=""/>
+    </div>
+    <div class="posts-preview__content">
+        <div class="posts-preview__data">
+            @@if (dataHash === true) {
+                <div class="posts-preview__data-hash">@@hash</div>
+            }
+            @@if (dataDate === true) {
+                <time class="posts-preview__data-date" datetime="2018-01-01 00:00:00">13 АПРЕЛЯ 2018</time>
+            }
+        </div>
+        <div class="posts-preview__title">@@title</div>
+        <div class="posts-preview__text">
+            Журнал «Лизинг ревю» завершил статистическое исследование лизинговой отрасли. Теперь мы точно знаем, сколько компаний готовы остаться в отрасли, сколько филиалов работает в республиках
+        </div>
+    </div>
+    <a href="#" class="posts-preview__link">@@title</a>
+</div>

@@ -1,0 +1,141 @@
+.posts {
+    margin-bottom: 50px;
+    
+    &__main-title {
+        @include pageTitle;
+    }
+    
+    &__title {
+        @include sectionTitle;
+    }
+    
+    &__more {
+        @include centeredButton;
+    }
+    
+    &__search-request {
+        font-size: 34px;
+        padding-top: 17px;
+        padding-bottom: 20px;
+        margin-bottom: 17px;
+        color: $theme;
+        border-top: 1px solid $border;
+        border-bottom: 1px solid $border;
+    }
+    
+    &__section {
+        margin-bottom: 77px;
+        
+        &-title {
+            font-size: 34px;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid $border;
+        }
+    }
+    
+    @media only screen and (max-width: 960px) {
+        padding-left: 15px;
+        padding-right: 15px;
+    
+        &__section {
+            margin-bottom: 40px;
+            
+            &-title {
+                margin-bottom: 30px;
+            }
+        }
+    
+        &__search-request {
+            margin-bottom: 30px;
+        }
+    }
+    
+    @media only screen and (max-width: 680px) {
+        margin-bottom: 30px;
+    }
+}
+
+.posts-preview {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    
+    &__image {
+        width: calc(50% - 25px);
+        overflow: hidden;
+        
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+            transition: all 1.5s;
+        }
+    }
+    
+    &__content {
+        width: calc(50% - 25px);
+    }
+    
+    &__data {
+        @include postData;
+    
+        mark {
+            color: $theme;
+        }
+    }
+    
+    &__title {
+        @include previewTitle;
+    
+        mark {
+            color: $theme;
+        }
+    }
+    
+    &__text {
+        @include previewText;
+    
+        mark {
+            color: $theme;
+        }
+    }
+    
+    &__link {
+        @include fullLink;
+    }
+    
+    &:hover {
+        .posts-preview__title {
+            color: $theme;
+        }
+    
+        .posts-preview__image img {
+            transform: scale(1.15);
+        }
+    }
+    
+    @media only screen and (max-width: 1024px) {
+        margin-bottom: 30px;
+    
+        &__image,
+        &__content {
+            width: calc(50% - 10px);
+        }
+    }
+    
+    @media only screen and (max-width: 680px) {
+        display: block;
+        margin-bottom: 47px;
+    
+        &__image,
+        &__content {
+            width: 100%;
+        }
+        
+        &__image {
+            margin-bottom: 18px;
+        }
+    }
+}

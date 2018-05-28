@@ -1,0 +1,111 @@
+.event-preview {
+    position: relative;
+    border: 1px solid $borderLight;
+    margin-bottom: 50px;
+    
+    &__all {
+        position: relative;
+        z-index: 10;
+        display: block;
+        padding-top: 27px;
+        padding-right: calc(9% + 24px);
+        padding-bottom: 26px;
+        padding-left: 9%;
+        font-size: 34px;
+        line-height: 0.9em;
+        color: $mainColor;
+        
+        &:hover {
+            text-decoration: none;
+            color: $theme;
+        }
+        
+        &:before {
+            position: absolute;
+            content: '';
+            top: 50%;
+            right: 9%;
+            display: block;
+            width: 24px;
+            height: 24px;
+            //noinspection CssUnknownTarget
+            background-image: url("../images/ui/arrow-right.svg");
+            background-size: 24px 24px;
+            transform: translate3d(0, -50%, 0);
+        }
+    }
+    
+    &__image {
+        overflow: hidden;
+        
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+            transition: all 1.5s;
+        }
+    }
+    
+    &__content {
+        padding-top: 23px;
+        padding-right: 9%;
+        padding-bottom: 26px;
+        padding-left: 9%;
+    }
+    
+    &__data {
+        @include postData;
+    }
+    
+    &__title {
+        @include previewTitle;
+    }
+    
+    &__text {
+        @include previewText;
+    }
+    
+    &__link {
+        @include fullLink;
+    }
+    
+    &__slide {
+        position: relative;
+        
+        &:hover {
+            .event-preview__title {
+                color: $theme;
+            }
+    
+            .event-preview__image img {
+                transform: scale(1.15);
+            }
+        }
+    }
+    
+    @media only screen and (max-width: 1024px) {
+        margin-bottom: 20px;
+        
+        &__all {
+            font-size: 24px;
+        }
+        
+        &__content {
+            padding-right: 15px;
+            padding-left: 15px;
+            padding-bottom: 15px;
+        }
+    }
+    
+    @media only screen and (max-width: 680px) {
+        margin-bottom: 40px;
+        
+        &__all {
+            padding-top: 24px;
+            padding-right: 39px;
+            padding-left: 15px;
+            padding-bottom: 26px;
+            font-size: 34px;
+        }
+    }
+}

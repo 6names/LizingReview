@@ -1,0 +1,92 @@
+[class*="butn"] {
+    position: relative;
+    display: block;
+    padding: 0;
+    margin: 0;
+    font-family: $mainFont;
+    text-align: center;
+    border: none;
+    outline: none;
+    transition: all 0.2s;
+    
+    &:disabled {
+        opacity: 0.5;
+    }
+    
+    &:enabled {
+        cursor: pointer;
+    }
+}
+
+a[class*="butn"]:hover {
+    text-decoration: none;
+}
+
+.red-butn {
+    @include buttonHeight(40px);
+    font-size: 14px;
+    text-transform: uppercase;
+    border: 1px solid $theme;
+    background-color: $theme;
+    color: $white;
+    font-weight: 600;
+    
+    svg {
+        top: 2px;
+        display: inline-block;
+        width: 14px;
+        height: 14px;
+        margin-left: 5px;
+        fill: $white;
+    }
+    
+    &:enabled:hover {
+        background-color: $white;
+        color: $theme;
+        
+        svg {
+            fill: $theme;
+        }
+    }
+    
+    @media only screen and (max-width: 1024px) {
+        font-size: 12px;
+    }
+}
+
+.gray-butn {
+    @include buttonHeight(40px);
+    font-size: 14px;
+    text-transform: uppercase;
+    border: 1px solid $gray;
+    background-color: $gray;
+    color: $white;
+    font-weight: 600;
+    
+    svg {
+        top: 2px;
+        display: inline-block;
+        width: 14px;
+        height: 14px;
+        margin-left: 5px;
+        fill: $white;
+    }
+    
+    &:enabled:hover {
+        background-color: $white;
+        color: $gray;
+        
+        svg {
+            fill: $gray;
+        }
+    }
+    
+    @media only screen and (max-width: 1024px) {
+        font-size: 12px;
+    }
+}
+
+a.gray-butn,
+a.red-butn {
+    line-height: 38px;
+}

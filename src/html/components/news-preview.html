@@ -1,0 +1,19 @@
+<div class="news-preview">
+    <div class="news-preview__image">
+        <img src="images/@@image" srcset="images/@@image2x 2x" alt=""/>
+    </div>
+    <div class="news-preview__data">
+        @@if (dataHash === true) {
+            <div class="news-preview__data-hash">@@hash</div>
+        }
+        @@if (dataDate === true) {
+            <time class="news-preview__data-date" datetime="2018-01-01 00:00:00">13 АПРЕЛЯ 2018</time>
+        }
+    </div>
+    <div class="news-preview__title">@@title</div>
+    <div class="news-preview__text">
+        Редакция журнала «Лизинг ревю» приняла участие в конференция «Снабжение
+        в нефтегазовом комплексе», в рамках которой организаторы подвели итоги ежегодного прямого опроса
+    </div>
+    <a href="#" class="news-preview__link">@@title</a>
+</div>

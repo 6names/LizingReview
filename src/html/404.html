@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        @@include("./components/head.html",{
+        "title" : "Ошибка 404"
+        })
+    </head>
+    
+    <body>
+        
+        <!--HEADER-->
+        @@include('./components/header.html')
+        <!-- end of HEADER-->
+        
+        <!--MAIN-->
+        <main class="main" id="main">
+            <div class="main__inner">
+
+                <!--error-block-->
+                <article class="error-block">
+                    @@include('./components/breadcrumbs.html', {
+                    "current" : "Ошибка 404"
+                    })
+                    
+                    <div class="error-block__title">
+                        <h1>Ошибка 404</h1>
+                    </div>
+                    
+                    <div class="error-block__text">
+                        Эта страница удалена или никогда <br/> не существовала
+                    </div>
+                    
+                    <a href="main.html" class="red-butn">НА Главную</a>
+    
+                </article>
+                <!-- end of error-block-->
+                
+            </div>
+        </main>
+        <!--end of MAIN-->
+        
+        <!--FOOTER-->
+        @@include('./components/footer.html')
+        <!-- end of FOOTER-->
+    </body>
+</html>

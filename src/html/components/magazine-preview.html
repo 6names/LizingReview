@@ -1,0 +1,73 @@
+<div class="magazine-preview">
+    <div class="magazine-preview__top">
+        <div class="magazine-preview__image">
+            <div class="magazine-preview__image-holder">
+                <img src="images/@@image" srcset="images/@@image2x 2x" alt=""/>
+            </div>
+    
+            @@if (dataHash === pdf) {
+                <div class="magazine-preview__download">
+                    <button class="red-butn magazine-preview__butn" type="button">Скачать PDF</button>
+                </div>
+            }
+        </div>
+    
+        <div class="magazine-preview__title">@@title</div>
+        <a href="#" class="magazine-preview__link">@@title</a>
+    </div>
+    
+    <div class="magazine-preview__slider">
+        <div class="magazine-preview__slide">
+            <div class="magazine-preview__slide-holder">
+                <div class="magazine-preview__data">
+                    @@if (dataHash === true) {
+                    <div class="magazine-preview__data-hash">@@hash</div>
+                    }
+                    @@if (dataDate === true) {
+                    <time class="magazine-preview__data-date" datetime="2018-01-01 00:00:00">13 АПРЕЛЯ 2018</time>
+                    }
+                </div>
+                <div class="magazine-preview__slide-title">@@slideTitleA</div>
+                <div class="magazine-preview__text">
+                    Как в алхимии главной загадкой является перерождение металлов взолото, так внауке иискусстве продаж центральной темой остаются поиск, перековка
+                </div>
+                <a href="#" class="magazine-preview__link">@@title</a>
+            </div>
+        </div>
+        <div class="magazine-preview__slide">
+            <div class="magazine-preview__slide-holder">
+                <div class="magazine-preview__data">
+                    @@if (dataHash === true) {
+                    <div class="magazine-preview__data-hash">@@hash</div>
+                    }
+                    @@if (dataDate === true) {
+                    <time class="magazine-preview__data-date" datetime="2018-01-01 00:00:00">13 АПРЕЛЯ 2018</time>
+                    }
+                </div>
+                <div class="magazine-preview__slide-title">@@slideTitleB</div>
+                <div class="magazine-preview__text">
+                    Редакция журнала «Лизинг ревю» приняла участие в конференция «Снабжение
+                    в нефтегазовом комплексе»
+                </div>
+                <a href="#" class="magazine-preview__link">@@title</a>
+            </div>
+        </div>
+        <div class="magazine-preview__slide">
+            <div class="magazine-preview__slide-holder">
+                <div class="magazine-preview__data">
+                    @@if (dataHash === true) {
+                    <div class="magazine-preview__data-hash">@@hash</div>
+                    }
+                    @@if (dataDate === true) {
+                    <time class="magazine-preview__data-date" datetime="2018-01-01 00:00:00">13 АПРЕЛЯ 2018</time>
+                    }
+                </div>
+                <div class="magazine-preview__slide-title">@@slideTitleA</div>
+                <div class="magazine-preview__text">
+                    Как в алхимии главной загадкой является перерождение металлов взолото, так внауке иискусстве продаж центральной темой остаются поиск, перековка
+                </div>
+                <a href="#" class="magazine-preview__link">@@title</a>
+            </div>
+        </div>
+    </div>
+</div>

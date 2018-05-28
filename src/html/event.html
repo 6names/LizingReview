@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        @@include("./components/head.html",{
+        "title" : "Страница Мероприятия"
+        })
+    </head>
+    
+    <body>
+        
+        <!--HEADER-->
+        @@include('./components/header.html')
+        <!-- end of HEADER-->
+        
+        <!--MAIN-->
+        <main class="main" id="main">
+            <div class="main__inner">
+                <!--main content-->
+                <div class="main__content">
+                    @@include('./components/breadcrumbs.html', {
+                        "current" : "Мероприятия журнала"
+                    })
+    
+                    <!--article-->
+                    <article class="article">
+                        <div class="article__title">
+                            <h1>Международный форум <br/>лизинг-специалистов в области автолизинга в Перми</h1>
+                        </div>
+                        
+                        <div class="article__event-data">
+                            <div class="article__event-data-item">
+                                <div class="article__event-data-label">КОГДА</div>
+                                <time class="article__event-data-value" datetime="2018-01-01 00:00:00">13 Апреля / 19:00</time>
+                                <svg class="icon-clock"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-clock"></use></svg>
+                            </div>
+                            <div class="article__event-data-item">
+                                <div class="article__event-data-label">ГДЕ:</div>
+                                <address class="article__event-data-value">Москва, Центральный дом художника, ул. Преображенская 12 , 20, 2-й этаж</address>
+                                <svg class="icon-compass"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-compass"></use></svg>
+                            </div>
+                        </div>
+                        
+                        <div class="article__event-data">
+                            <div class="article__event-data-item">
+                                <div class="article__event-data-label">СПИКЕРЫ:</div>
+                                <ul class="article__event-data-value">
+                                    <li>Александр Михайлов,</li>
+                                    <li>Сергей Моисеев,</li>
+                                    <li>Гарегин Тосунян,</li>
+                                    <li>Татьяна Савельева.</li>
+                                </ul>
+                                <svg class="icon-users"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-users"></use></svg>
+                            </div>
+                        </div>
+                        
+                        <figure class="article__figure">
+                            <img src="images/main-banner.jpg" srcset="images/main-banner@2x.jpg 2x" alt=""/>
+                            <figcaption class="article__figure-caption">Фото: Владимир Соловьев</figcaption>
+                        </figure>
+                        
+                        <div class="article__buttons">
+                            <button class="gray-butn article__download" type="button">
+                                СКАЧАТЬ ПРОГРАММУ
+                                <svg class="icon-download"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-download"></use></svg>
+                            </button>
+                            <button class="gray-butn article__print" type="button">
+                                РАСПЕЧАТАТЬ
+                                <svg class="icon-print"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-print"></use></svg>
+                            </button>
+                        </div>
+                        
+                        <div class="article__content">
+                            <p>Удорожанием в лизинговой сделке называется отношение затраченных сумм к первоначальной стоимости лизингового имущества. Обычно процент удорожания указывается как средний процент удорожания за год.Удорожанием в лизинговой сделке называется отношение затраченных сумм к первоначальной стоимости лизингового имущества. Обычно процент удорожания указывается как средний процент удорожания за год.Удорожанием в лизинговой сделке называется отношение затраченных сумм к первоначальной стоимости лизингового имущества. Обычно процент удорожания указывается как средний процент удорожания за год.</p>
+                            <p>Удорожанием в лизинговой сделке называется отношение затраченных сумм к первоначальной стоимости лизингового имущества. Обычно процент удорожания указывается как средний процент удорожания за год.Удорожанием в лизинговой сделке называется отношение затраченных сумм к первоначальной стоимости лизингового имущества. Обычно процент удорожания указывается как средний процент удорожания за год.</p>
+                            <p>Удорожанием в лизинговой сделке называется отношение затраченных сумм к первоначальной стоимости лизингового имущества. Обычно процент удорожания указывается как средний процент удорожания за год.</p>
+                        </div>
+                    </article>
+                    <!-- end of article-->
+                </div>
+                
+                <!--sidebar-->
+                <aside class="main__sidebar">
+                    @@include('./components/sidebar-form.html')
+                    @@include('./components/sidebar-banner.html')
+                </aside>
+            </div>
+        </main>
+        <!--end of MAIN-->
+        
+        <!--FOOTER-->
+        @@include('./components/footer.html')
+        <!-- end of FOOTER-->
+    </body>
+</html>

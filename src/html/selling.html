@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        @@include("./components/head.html",{
+        "title" : "Реализация имущества"
+        })
+    </head>
+    
+    <body>
+        
+        <!--HEADER-->
+        @@include('./components/header.html')
+        <!-- end of HEADER-->
+        
+        <!--MAIN-->
+        <main class="main" id="main">
+            <div class="main__inner">
+                <!--main content-->
+                <div class="main__content">
+                    @@include('./components/breadcrumbs.html', {
+                    "current" : "Реализация имущества"
+                    })
+                    
+                    <!--selling-->
+                    <article class="selling">
+                        <div class="selling__main-title">
+                            <h1>Реализация имущества</h1>
+                        </div>
+                        
+                        <div class="selling__list">
+                            
+                            @@loop("./components/selling-item.html", [{
+                            "title" : "Насосная система для откачки мазута высокого давления УТПРМ-31-21"
+                            },{
+                            "title" : "Насосная система для откачки мазута"
+                            },{
+                            "title" : "Насосная система для откачки мазута"
+                            },{
+                            "title" : "Насосная система для откачки мазута"
+                            },{
+                            "title" : "Насосная система для откачки мазута"
+                            }])
+                        
+                        </div>
+                    </article>
+                    <!-- end of selling-->
+                </div>
+                
+                <!--sidebar-->
+                <aside class="main__sidebar">
+                    
+                    <button class="red-butn sidebar__butn modal-trigger" type="button" data-target="request-modal">РАЗМЕСТИТЬ СВОЕ ОБЬЯВЛЕНИЕ</button>
+                    
+                    @@include('./components/sidebar-banner.html')
+                    
+                    <!--sidebar magazine-->
+                    @@include('./components/magazine-preview.html',{
+                    "dataDate" : true,
+                    "dataHash" : true,
+                    "pdf": false,
+                    "image":"magazine-preview-1.jpg",
+                    "image2x":"magazine-preview-1@2x.jpg",
+                    "title" : "Свежий номер # 4",
+                    "hash" : "# анализ",
+                    "slideTitleA" : "Жизненный элексир продаж",
+                    "slideTitleB" : "Жизненный элексир"
+                    })
+                    <!-- end of sidebar magazine-->
+                </aside>
+            </div>
+        </main>
+        <!--end of MAIN-->
+        
+        <!--FOOTER-->
+        @@include('./components/footer.html')
+        <!-- end of FOOTER-->
+    </body>
+</html>

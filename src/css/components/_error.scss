@@ -1,0 +1,38 @@
+.error-block {
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    
+    &__title {
+        @include pageTitle;
+    }
+    
+    &__text {
+        max-width: 748px;
+        padding-top: 30px;
+        margin-bottom: 30px;
+        font-size: 34px;
+        border-top: 1px solid $border;
+    }
+    
+    [class*="butn"] {
+        width: 100%;
+        max-width: 175px;
+    }
+    
+    @media only screen and (max-width: 960px) {
+        padding-left: 15px;
+        padding-right: 15px;
+    
+        &__text {
+            font-size: 20px;
+            padding-top: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .breadcrumbs {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+}

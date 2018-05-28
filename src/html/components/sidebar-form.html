@@ -1,0 +1,41 @@
+<div class="sidebar-form">
+    <form class="sidebar-form__holder" id="event-registration">
+        <div class="sidebar-form__title">Регистрация<br/>на мероприятие</div>
+        
+        <div class="sidebar-form__content">
+            <div class="input-line">
+                <label class="input-label" for="sidebar-form-name">ФИО</label>
+                <input class="text-input" id="sidebar-form-name" name="name" type="text" data-required="required">
+            </div>
+            <div class="input-line">
+                <label class="input-label" for="sidebar-form-position">Должность</label>
+                <input class="text-input" id="sidebar-form-position" name="position" type="text" data-required="required">
+            </div>
+            <div class="input-line">
+                <label class="input-label" for="sidebar-form-company">Название компании</label>
+                <input class="text-input" id="sidebar-form-company" name="company" type="text" data-required="required">
+            </div>
+            <div class="input-line">
+                <label class="input-label" for="sidebar-form-email">E-mail</label>
+                <input class="text-input" id="sidebar-form-email" name="email" type="email" data-required="required">
+            </div>
+            <div class="input-line">
+                <label class="input-label" for="sidebar-form-tel">Телефон</label>
+                <input class="text-input" id="sidebar-form-tel" name="tel" type="tel" placeholder="8 (_ _ _)- _ _ _-_ _-_ _" data-required="required">
+            </div>
+            <div class="input-line">
+                <label class="input-label" for="sidebar-form-message">Форма для комментария</label>
+                <textarea class="textarea-field" id="sidebar-form-message" name="message" data-required="required"></textarea>
+            </div>
+            <div class="input-line">
+                <div class="file__list"></div>
+                <label class="file__label">
+                    <input class="file visually-hidden" id="sidebar-form-file" type="file" name="file"/>
+                    <svg class="icon-plus"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-plus"></use></svg>
+                    Добавить файл с реквизитами
+                </label>
+            </div>
+            <button class="red-butn" type="submit">ОТПРАВИТЬ</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,66 @@
+.category-nav {
+    @include inner();
+    opacity: 0;
+    transition: opacity 0.2s 0.5s;
+    
+    .loaded & {
+        opacity: 1;
+    }
+    
+    &__list {
+        display: flex;
+        justify-content: center;
+        padding-top: 29px;
+        padding-bottom: 30px;
+        border-bottom: 1px solid $border;
+    }
+    
+    &__item {
+        &:not(:first-child) {
+            margin-left: 35px;
+        }
+    }
+    
+    &__link {
+        font-weight: 600;
+        text-transform: uppercase;
+        color: $mainColor;
+        
+        &.current,
+        &:hover {
+            text-decoration: none;
+            color: $theme;
+        }
+    
+        &.current {
+            pointer-events: none;
+        }
+    }
+    
+    @media only screen and (max-width: 1024px) {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+        order: 1;
+        
+        &__list {
+            display: block;
+            padding-top: 24px;
+            padding-bottom: 26px;
+        }
+    
+        &__item {
+            &:not(:first-child) {
+                margin-left: 0;
+                margin-top: 13px;
+            }
+        }
+    
+        &__link {
+            display: block;
+            padding-left: 30px;
+            padding-right: 30px;
+            font-size: 19px;
+        }
+    }
+}
