@@ -102,6 +102,12 @@
         }
     }
     
+    &__list {
+        li {
+            display: inline-block;
+        }
+    }
+    
     &__link {
         @include fullLink;
     }

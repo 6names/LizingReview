@@ -1,21 +1,21 @@
 //fonts
 //noinspection ALL
 @font-face {
-    font-family: 'Gill Sans';
-    src: local('Gill Sans SemiBold'), local('GillSans-SemiBold'),
-    url('../fonts/GillSans-SemiBold.woff2') format('woff2'),
-    url('../fonts/GillSans-SemiBold.woff') format('woff');
-    font-weight: 600;
+    font-family: 'GillSansC';
+    src: local('GillSansC'),
+    url('../fonts/GillSansC.woff2') format('woff2'),
+    url('../fonts/GillSansC.woff') format('woff');
+    font-weight: normal;
     font-style: normal;
 }
 
 //noinspection ALL
 @font-face {
-    font-family: 'Gill Sans';
-    src: local('Gill Sans'), local('GillSans'),
-    url('../fonts/GillSans.woff2') format('woff2'),
-    url('../fonts/GillSans.woff') format('woff');
-    font-weight: 400;
+    font-family: 'GillSansC';
+    src: local('GillSansC Bold'), local('GillSansC-Bold'),
+    url('../fonts/GillSansC-Bold.woff2') format('woff2'),
+    url('../fonts/GillSansC-Bold.woff') format('woff');
+    font-weight: 600;
     font-style: normal;
 }
 

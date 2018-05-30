@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        @@include("./components/head.html",{
+        "title" : "Контакты"
+        })
+    </head>
+    
+    <body>
+        
+        <!--HEADER-->
+        @@include('./components/header.html')
+        <!-- end of HEADER-->
+        
+        <!--MAIN-->
+        <main class="main" id="main">
+            <div class="main__inner">
+                
+                <!--contacts-->
+                <article class="contacts">
+                    @@include('./components/breadcrumbs.html', {
+                    "current" : "Контакты"
+                    })
+                    
+                    <div class="contacts__title">
+                        <h1>Контакты</h1>
+                    </div>
+                    
+                    <ul class="contacts__list">
+                        <li class="contacts__item">
+                            Адрес:
+                            <address>Москва Габричевского Ул., дом 10/4, кв. 406</address>
+                        </li>
+                        <li class="contacts__item">
+                            Телефон:
+                            <a href="tel:74991825623" class="call-to">+7(499)182-56-23</a>
+                        </li>
+                        <li class="contacts__item">
+                            Email:
+                            <a href="mailto:email.fake@gmail.com" class="mail-to">email.fake@gmail.com</a>
+                        </li>
+                    </ul>
+                    
+                    <a href="main.html" class="red-butn modal-trigger" data-target="request-modal">Связаться с нами</a>
+                
+                </article>
+                <!-- end of contacts-->
+            
+            </div>
+        </main>
+        <!--end of MAIN-->
+        
+        <!--FOOTER-->
+        @@include('./components/footer.html')
+        <!-- end of FOOTER-->
+    </body>
+</html>

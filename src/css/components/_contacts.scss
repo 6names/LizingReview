@@ -1,0 +1,43 @@
+.contacts {
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    
+    &__title {
+        @include pageTitle;
+    }
+    
+    &__list {
+        max-width: 748px;
+        padding-top: 30px;
+        margin-bottom: 30px;
+        border-top: 1px solid $border;
+    }
+    
+    &__item {
+        @include previewText;
+        
+        address {
+            display: inline-block;
+        }
+        
+        &:not(:first-child) {
+            margin-top: 10px;
+        }
+    }
+    
+    [class*="butn"] {
+        width: 100%;
+        max-width: 175px;
+    }
+    
+    @media only screen and (max-width: 960px) {
+        padding-left: 15px;
+        padding-right: 15px;
+        
+        .breadcrumbs {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+}
