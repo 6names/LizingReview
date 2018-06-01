@@ -199,7 +199,7 @@ gulp.task('clean', function () {
 gulp.task('sass-build', function () {
     return gulp.src(paths.dev.css.src)
         .pipe(plumber())
-        .pipe(sourcemaps.init())
+        // .pipe(sourcemaps.init())
         .pipe(sass())
         .pipe(postcss([
             autoprefixer({
@@ -210,8 +210,8 @@ gulp.task('sass-build', function () {
                 sort: sortCSSmq.desktopFirst
             })
         ]))
-        .pipe(csso())
-        .pipe(sourcemaps.write('./'))
+        // .pipe(csso())
+        // .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest(paths.build.css));
 });
 
@@ -220,7 +220,7 @@ gulp.task('scripts-build', function () {
     return gulp.src(paths.dev.js.src)
         .pipe(plumber())
         .pipe(webpack({
-            devtool: 'source-map',
+            // devtool: 'source-map',
             output: {
                 filename: 'main.js',
             },
@@ -237,8 +237,8 @@ gulp.task('scripts-build', function () {
                         }
                     }
                 ]
-            },
-            plugins: [new UglifyJsPlugin()]
+            }
+            // plugins: [new UglifyJsPlugin()]
         }))
         .pipe(gulp.dest(paths.build.js));
 });
@@ -251,10 +251,10 @@ gulp.task('html-build', function () {
             prefix: '@@',
             basepath: '@file'
         }))
-        .pipe(htmlmin({
+        /*.pipe(htmlmin({
             collapseWhitespace: true,
             removeComments: true
-        }))
+        }))*/
         .pipe(gulp.dest(paths.build.dist));
 });
 
@@ -266,10 +266,10 @@ gulp.task('modals-build', function () {
             prefix: '@@',
             basepath: '@file'
         }))
-        .pipe(htmlmin({
+        /*.pipe(htmlmin({
             collapseWhitespace: true,
             removeComments: true
-        }))
+        }))*/
         .pipe(gulp.dest(paths.build.modals.dist));
 });
 

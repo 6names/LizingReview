@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.1"/>
+
+<title>Реализация имущества</title>
+<meta name="description" content="Project Description"/>
+<meta name="keywords" content="Project keywords"/>
+
+<!--icons-->
+<link rel="apple-touch-icon" sizes="180x180" href="images/touch/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/touch/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/touch/favicon-16x16.png">
+<link rel="manifest" href="images/touch/site.webmanifest">
+<link rel="mask-icon" href="images/touch/safari-pinned-tab.svg" color="#d42032">
+<link rel="shortcut icon" href="images/touch/favicon.ico">
+<meta name="msapplication-TileColor" content="#d42032">
+<meta name="msapplication-config" content="images/touch/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+<!--social icons-->
+<meta property="og:image:height" content="452">
+<meta property="og:image:width" content="863">
+<meta property="og:url" content="http://example.com">
+<meta property="og:image" content="images/touch/og-image.jpg">
+<meta property="og:description" content="Лизинг ревю - первый в России журнал о лизинге (издается с 1996 года).">
+<meta property="og:title" content="Лизинг ревю">
+
+<style>
+    .main {
+        opacity: 0;
+    }
+</style>
+    </head>
+    
+    <body>
+        
+        <!--HEADER-->
+        <header class="header">
+    <!--logo-->
+    <div class="header__logo">
+        <div class="header__logo-holder">
+            <a class="header__logo-link" href="main.html">
+                <img src="images/ui/logo.svg" width="118" height="47" alt="Лизинг Ревю"/>
+            </a>
+        </div>
+    </div>
+    
+    <div class="header__mobile">
+        <nav class="header__mobile-scroll">
+            <div class="header__mobile-content">
+                
+                <div class="header__top">
+                    <!--search-->
+                    <div class="header__search search">
+                        <form id="form" class="search__form">
+                            <input class="search__input" type="search" title="Поиск">
+                            <button class="search__butn" type="submit">
+                                <svg class="icon-search"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-search"></use></svg>
+                            </button>
+                        </form>
+                    </div>
+        
+                    <!--buttons-->
+                    <div class="header__right">
+                        <button class="gray-butn" type="button">РЕКЛАМОДАТЕЛЯМ</button>
+                        <button class="red-butn modal-trigger" type="button" data-target="subscribe-modal">ПОДПИСКА</button>
+                    </div>
+                </div>
+    
+                <nav class="header__nav">
+                    <!--main nav-->
+                    <div class="main-nav">
+                        <ul class="main-nav__list">
+                            <li class="main-nav__item">
+                                <a href="about.html" class="main-nav__link">О журнале</a>
+                            </li>
+                            <li class="main-nav__item">
+                                <a href="magazine-archive.html" class="main-nav__link">Архив журнала</a>
+                            </li>
+                            <li class="main-nav__item">
+                                <a href="events.html" class="main-nav__link">Мероприятия журнала</a>
+                            </li>
+                            <li class="main-nav__item">
+                                <a href="selling.html" class="main-nav__link">Реализация имущества</a>
+                            </li>
+                            <li class="main-nav__item">
+                                <a href="vacancy.html" class="main-nav__link">Вакансии отрасли</a>
+                            </li>
+                            <li class="main-nav__item">
+                                <a href="#" class="main-nav__link modal-trigger" data-target="request-modal">Задать вопрос</a>
+                            </li>
+                            <li class="main-nav__item">
+                                <a href="contacts.html" class="main-nav__link">Контакты</a>
+                            </li>
+                        </ul>
+                    </div>
+    
+                    <!--category nav-->
+                    <div class="category-nav">
+                        <ul class="category-nav__list">
+                            <li class="category-nav__item">
+                                <a href="#" class="category-nav__link">Новости</a>
+                            </li>
+                            <li class="category-nav__item">
+                                <a href="#" class="category-nav__link">Интервью номера</a>
+                            </li>
+                            <li class="category-nav__item">
+                                <a href="reform.html" class="category-nav__link current">Реформа</a>
+                            </li>
+                            <li class="category-nav__item">
+                                <a href="#" class="category-nav__link">Сообщество</a>
+                            </li>
+                            <li class="category-nav__item">
+                                <a href="article.html" class="category-nav__link">Господдержка</a>
+                            </li>
+                            <li class="category-nav__item">
+                                <a href="#" class="category-nav__link">Анализ</a>
+                            </li>
+                            <li class="category-nav__item">
+                                <a href="#" class="category-nav__link">Опыт</a>
+                            </li>
+                            <li class="category-nav__item">
+                                <a href="#" class="category-nav__link">Маркетинг</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </nav>
+    </div>
+    <div class="header__mobile-close"></div>
+    <button class="header__mobile-button" type="button">Menu</button>
+</header>
+        <!-- end of HEADER-->
+        
+        <!--MAIN-->
+        <main class="main" id="main">
+            <div class="main__inner">
+                <!--main content-->
+                <div class="main__content">
+                    <ul class="breadcrumbs">
+    <li class="breadcrumbs__item">
+        <a href="#">Главная</a>
+    </li>
+    <li class="breadcrumbs__item">
+        <a href="#">Реализация имущества</a>
+    </li>
+</ul>
+                    
+                    <!--selling-->
+                    <article class="selling">
+                        <div class="selling__main-title">
+                            <h1>Реализация имущества</h1>
+                        </div>
+                        
+                        <div class="selling__list">
+                            
+                            <div class="selling__item">
+    <div class="selling__item-title">
+        Насосная система для откачки мазута высокого давления УТПРМ-31-21
+    </div>
+    <figure class="selling__item-image">
+        <img src="images/selling-item.jpg" srcset="images/selling-item@2x.jpg 2x" alt="" class="modal-trigger" data-target="gallery-modal"/>
+        <figcaption class="selling__item-image-caption">8 фото</figcaption>
+    </figure>
+    <div class="selling__item-data">
+        <div class="selling__item-data-item">100 000 р..</div>
+        <div class="selling__item-data-item">Магнитогорск</div>
+        <time class="selling__item-data-item" datetime="2018-01-01 00:00:00">
+            13 Апреля / 19:00
+        </time>
+    </div>
+    <div class="selling__item-contacts">
+        <div class="selling__contacts-company">ООО Агентство недвижимости Простор</div>
+        Телефон:
+        <a href="tel:89259433293" class="call-to">8 925 943 32 93</a>
+        / E-mail:
+        <a href="mailto:hello@prostor-nasos.ru" class="mail-to">hello@prostor-nasos.ru</a>
+    </div>
+    <div class="selling__item-content">
+        Консультирование клиентов по вопросам вложения крупных денежных средств в недвижимость. Составление сравнительного анализа инвестиций в различные объекты. Подбор объектов обычно процент удорожания указывается как средний процент удорожания.
+        за год.Удорожанием в лизинговой сделке называется
+    </div>
+</div>
+
+<div class="selling__item">
+    <div class="selling__item-title">
+        Насосная система для откачки мазута
+    </div>
+    <figure class="selling__item-image">
+        <img src="images/selling-item.jpg" srcset="images/selling-item@2x.jpg 2x" alt="" class="modal-trigger" data-target="gallery-modal"/>
+        <figcaption class="selling__item-image-caption">8 фото</figcaption>
+    </figure>
+    <div class="selling__item-data">
+        <div class="selling__item-data-item">100 000 р..</div>
+        <div class="selling__item-data-item">Магнитогорск</div>
+        <time class="selling__item-data-item" datetime="2018-01-01 00:00:00">
+            13 Апреля / 19:00
+        </time>
+    </div>
+    <div class="selling__item-contacts">
+        <div class="selling__contacts-company">ООО Агентство недвижимости Простор</div>
+        Телефон:
+        <a href="tel:89259433293" class="call-to">8 925 943 32 93</a>
+        / E-mail:
+        <a href="mailto:hello@prostor-nasos.ru" class="mail-to">hello@prostor-nasos.ru</a>
+    </div>
+    <div class="selling__item-content">
+        Консультирование клиентов по вопросам вложения крупных денежных средств в недвижимость. Составление сравнительного анализа инвестиций в различные объекты. Подбор объектов обычно процент удорожания указывается как средний процент удорожания.
+        за год.Удорожанием в лизинговой сделке называется
+    </div>
+</div>
+
+<div class="selling__item">
+    <div class="selling__item-title">
+        Насосная система для откачки мазута
+    </div>
+    <figure class="selling__item-image">
+        <img src="images/selling-item.jpg" srcset="images/selling-item@2x.jpg 2x" alt="" class="modal-trigger" data-target="gallery-modal"/>
+        <figcaption class="selling__item-image-caption">8 фото</figcaption>
+    </figure>
+    <div class="selling__item-data">
+        <div class="selling__item-data-item">100 000 р..</div>
+        <div class="selling__item-data-item">Магнитогорск</div>
+        <time class="selling__item-data-item" datetime="2018-01-01 00:00:00">
+            13 Апреля / 19:00
+        </time>
+    </div>
+    <div class="selling__item-contacts">
+        <div class="selling__contacts-company">ООО Агентство недвижимости Простор</div>
+        Телефон:
+        <a href="tel:89259433293" class="call-to">8 925 943 32 93</a>
+        / E-mail:
+        <a href="mailto:hello@prostor-nasos.ru" class="mail-to">hello@prostor-nasos.ru</a>
+    </div>
+    <div class="selling__item-content">
+        Консультирование клиентов по вопросам вложения крупных денежных средств в недвижимость. Составление сравнительного анализа инвестиций в различные объекты. Подбор объектов обычно процент удорожания указывается как средний процент удорожания.
+        за год.Удорожанием в лизинговой сделке называется
+    </div>
+</div>
+
+<div class="selling__item">
+    <div class="selling__item-title">
+        Насосная система для откачки мазута
+    </div>
+    <figure class="selling__item-image">
+        <img src="images/selling-item.jpg" srcset="images/selling-item@2x.jpg 2x" alt="" class="modal-trigger" data-target="gallery-modal"/>
+        <figcaption class="selling__item-image-caption">8 фото</figcaption>
+    </figure>
+    <div class="selling__item-data">
+        <div class="selling__item-data-item">100 000 р..</div>
+        <div class="selling__item-data-item">Магнитогорск</div>
+        <time class="selling__item-data-item" datetime="2018-01-01 00:00:00">
+            13 Апреля / 19:00
+        </time>
+    </div>
+    <div class="selling__item-contacts">
+        <div class="selling__contacts-company">ООО Агентство недвижимости Простор</div>
+        Телефон:
+        <a href="tel:89259433293" class="call-to">8 925 943 32 93</a>
+        / E-mail:
+        <a href="mailto:hello@prostor-nasos.ru" class="mail-to">hello@prostor-nasos.ru</a>
+    </div>
+    <div class="selling__item-content">
+        Консультирование клиентов по вопросам вложения крупных денежных средств в недвижимость. Составление сравнительного анализа инвестиций в различные объекты. Подбор объектов обычно процент удорожания указывается как средний процент удорожания.
+        за год.Удорожанием в лизинговой сделке называется
+    </div>
+</div>
+
+<div class="selling__item">
+    <div class="selling__item-title">
+        Насосная система для откачки мазута
+    </div>
+    <figure class="selling__item-image">
+        <img src="images/selling-item.jpg" srcset="images/selling-item@2x.jpg 2x" alt="" class="modal-trigger" data-target="gallery-modal"/>
+        <figcaption class="selling__item-image-caption">8 фото</figcaption>
+    </figure>
+    <div class="selling__item-data">
+        <div class="selling__item-data-item">100 000 р..</div>
+        <div class="selling__item-data-item">Магнитогорск</div>
+        <time class="selling__item-data-item" datetime="2018-01-01 00:00:00">
+            13 Апреля / 19:00
+        </time>
+    </div>
+    <div class="selling__item-contacts">
+        <div class="selling__contacts-company">ООО Агентство недвижимости Простор</div>
+        Телефон:
+        <a href="tel:89259433293" class="call-to">8 925 943 32 93</a>
+        / E-mail:
+        <a href="mailto:hello@prostor-nasos.ru" class="mail-to">hello@prostor-nasos.ru</a>
+    </div>
+    <div class="selling__item-content">
+        Консультирование клиентов по вопросам вложения крупных денежных средств в недвижимость. Составление сравнительного анализа инвестиций в различные объекты. Подбор объектов обычно процент удорожания указывается как средний процент удорожания.
+        за год.Удорожанием в лизинговой сделке называется
+    </div>
+</div>
+
+
+                        
+                        </div>
+                    </article>
+                    <!-- end of selling-->
+                </div>
+                
+                <!--sidebar-->
+                <aside class="main__sidebar">
+                    
+                    <button class="red-butn sidebar__butn modal-trigger" type="button" data-target="request-modal">РАЗМЕСТИТЬ СВОЕ ОБЬЯВЛЕНИЕ</button>
+                    
+                    <div class="sidebar-banner">
+    <a href="#">
+        <img src="images/aside-banner.jpg" srcset="images/aside-banner@2x.jpg 2x" alt=""/>
+    </a>
+</div>
+                    
+                    <!--sidebar magazine-->
+                    <div class="magazine-preview">
+    <div class="magazine-preview__top">
+        <div class="magazine-preview__image">
+            <div class="magazine-preview__image-holder">
+                <img src="images/magazine-preview-1.jpg" srcset="images/magazine-preview-1@2x.jpg 2x" alt=""/>
+            </div>
+    
+            
+        </div>
+    
+        <div class="magazine-preview__title">Свежий номер # 4</div>
+        <a href="#" class="magazine-preview__link">Свежий номер # 4</a>
+    </div>
+    
+    <div class="magazine-preview__slider">
+        <div class="magazine-preview__slide">
+            <div class="magazine-preview__slide-holder">
+                <div class="magazine-preview__data">
+                    
+                    <div class="magazine-preview__data-hash"># анализ</div>
+                    
+                    
+                    <time class="magazine-preview__data-date" datetime="2018-01-01 00:00:00">13 АПРЕЛЯ 2018</time>
+                    
+                </div>
+                <div class="magazine-preview__slide-title">Жизненный элексир продаж</div>
+                <div class="magazine-preview__text">
+                    Как в алхимии главной загадкой является перерождение металлов взолото, так внауке иискусстве продаж центральной темой остаются поиск, перековка
+                </div>
+                <a href="#" class="magazine-preview__link">Свежий номер # 4</a>
+            </div>
+        </div>
+        <div class="magazine-preview__slide">
+            <div class="magazine-preview__slide-holder">
+                <div class="magazine-preview__data">
+                    
+                    <div class="magazine-preview__data-hash"># анализ</div>
+                    
+                    
+                    <time class="magazine-preview__data-date" datetime="2018-01-01 00:00:00">13 АПРЕЛЯ 2018</time>
+                    
+                </div>
+                <div class="magazine-preview__slide-title">Жизненный элексир</div>
+                <div class="magazine-preview__text">
+                    Редакция журнала «Лизинг ревю» приняла участие в конференция «Снабжение
+                    в нефтегазовом комплексе»
+                </div>
+                <a href="#" class="magazine-preview__link">Свежий номер # 4</a>
+            </div>
+        </div>
+        <div class="magazine-preview__slide">
+            <div class="magazine-preview__slide-holder">
+                <div class="magazine-preview__data">
+                    
+                    <div class="magazine-preview__data-hash"># анализ</div>
+                    
+                    
+                    <time class="magazine-preview__data-date" datetime="2018-01-01 00:00:00">13 АПРЕЛЯ 2018</time>
+                    
+                </div>
+                <div class="magazine-preview__slide-title">Жизненный элексир продаж</div>
+                <div class="magazine-preview__text">
+                    Как в алхимии главной загадкой является перерождение металлов взолото, так внауке иискусстве продаж центральной темой остаются поиск, перековка
+                </div>
+                <a href="#" class="magazine-preview__link">Свежий номер # 4</a>
+            </div>
+        </div>
+    </div>
+</div>
+                    <!-- end of sidebar magazine-->
+                </aside>
+            </div>
+        </main>
+        <!--end of MAIN-->
+        
+        <!--FOOTER-->
+        <!--ANCHOR-->
+<a href="#main" class="page-anchor anchor">
+    <svg class="icon-arrow-up"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow-up"></use></svg>
+    <span class="page-anchor__text">Наверх</span>
+</a>
+
+<!--FOOTER-->
+<footer class="footer">
+    <div class="footer__inner">
+        
+        <div class="footer__left">
+            <small class="footer__copyright">
+                <svg class="icon-adult"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-adult"></use></svg>
+                &copy; Лизинг ревю» 2017-2018 Все права защищены.<br/>
+                Полное или частичное копирование любых материалов сайта возможно только с письменного разрешения редакции журнала «ЛР». Нарушение авторских прав влечет за собой ответственность в соответствии с законодательством РФ. Зарегистрировано Федеральной службой по надзору в сфере связи, информационных технологий и массовых коммуникаций (Роскомнадзор) <br/>
+                <a href="#">Свидетельство о регистрации</a>
+            </small>
+            
+            <ul class="footer__links">
+                <li class="footer__links-item"><a href="#">Правила обработки персональных данных</a></li>
+                <li class="footer__links-item"><a href="#">Карта сайта</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer__right">
+            <div class="subscribe-form">
+    <div class="subscribe-form__label">Подписаться на новости:</div>
+    <form id="subscribe-form" class="subscribe-form__holder">
+        <input class="subscribe-form__input" name="email" type="email" placeholder="Ваш E-mail" data-required="required">
+        
+        <button class="subscribe-form__butn" type="submit">
+            <svg class="icon-arrow-right"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow-right"></use></svg>
+        </button>
+    </form>
+</div>
+            
+            <div class="footer__socials">
+                <a href="#" class="footer__socials-link" target="_blank" rel="nofollow">
+                    <svg class="icon-vk"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-vk"></use></svg>
+                </a>
+                <a href="#" class="footer__socials-link" target="_blank" rel="nofollow">
+                    <svg class="icon-facebook"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-facebook"></use></svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!--STYLE-->
+<link rel="stylesheet" href="css/style.css"/>
+
+<!--JS-->
+<script src="js/main.js"></script>
+<script src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+<script src="//yastatic.net/share2/share.js"></script>
+        <!-- end of FOOTER-->
+    </body>
+</html>

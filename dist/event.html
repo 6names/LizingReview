@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.1"/>
+
+<title>Страница Мероприятия</title>
+<meta name="description" content="Project Description"/>
+<meta name="keywords" content="Project keywords"/>
+
+<!--icons-->
+<link rel="apple-touch-icon" sizes="180x180" href="images/touch/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/touch/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/touch/favicon-16x16.png">
+<link rel="manifest" href="images/touch/site.webmanifest">
+<link rel="mask-icon" href="images/touch/safari-pinned-tab.svg" color="#d42032">
+<link rel="shortcut icon" href="images/touch/favicon.ico">
+<meta name="msapplication-TileColor" content="#d42032">
+<meta name="msapplication-config" content="images/touch/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+<!--social icons-->
+<meta property="og:image:height" content="452">
+<meta property="og:image:width" content="863">
+<meta property="og:url" content="http://example.com">
+<meta property="og:image" content="images/touch/og-image.jpg">
+<meta property="og:description" content="Лизинг ревю - первый в России журнал о лизинге (издается с 1996 года).">
+<meta property="og:title" content="Лизинг ревю">
+
+<style>
+    .main {
+        opacity: 0;
+    }
+</style>
+    </head>
+    
+    <body>
+        
+        <!--HEADER-->
+        <header class="header">
+    <!--logo-->
+    <div class="header__logo">
+        <div class="header__logo-holder">
+            <a class="header__logo-link" href="main.html">
+                <img src="images/ui/logo.svg" width="118" height="47" alt="Лизинг Ревю"/>
+            </a>
+        </div>
+    </div>
+    
+    <div class="header__mobile">
+        <nav class="header__mobile-scroll">
+            <div class="header__mobile-content">
+                
+                <div class="header__top">
+                    <!--search-->
+                    <div class="header__search search">
+                        <form id="form" class="search__form">
+                            <input class="search__input" type="search" title="Поиск">
+                            <button class="search__butn" type="submit">
+                                <svg class="icon-search"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-search"></use></svg>
+                            </button>
+                        </form>
+                    </div>
+        
+                    <!--buttons-->
+                    <div class="header__right">
+                        <button class="gray-butn" type="button">РЕКЛАМОДАТЕЛЯМ</button>
+                        <button class="red-butn modal-trigger" type="button" data-target="subscribe-modal">ПОДПИСКА</button>
+                    </div>
+                </div>
+    
+                <nav class="header__nav">
+                    <!--main nav-->
+                    <div class="main-nav">
+                        <ul class="main-nav__list">
+                            <li class="main-nav__item">
+                                <a href="about.html" class="main-nav__link">О журнале</a>
+                            </li>
+                            <li class="main-nav__item">
+                                <a href="magazine-archive.html" class="main-nav__link">Архив журнала</a>
+                            </li>
+                            <li class="main-nav__item">
+                                <a href="events.html" class="main-nav__link">Мероприятия журнала</a>
+                            </li>
+                            <li class="main-nav__item">
+                                <a href="selling.html" class="main-nav__link">Реализация имущества</a>
+                            </li>
+                            <li class="main-nav__item">
+                                <a href="vacancy.html" class="main-nav__link">Вакансии отрасли</a>
+                            </li>
+                            <li class="main-nav__item">
+                                <a href="#" class="main-nav__link modal-trigger" data-target="request-modal">Задать вопрос</a>
+                            </li>
+                            <li class="main-nav__item">
+                                <a href="contacts.html" class="main-nav__link">Контакты</a>
+                            </li>
+                        </ul>
+                    </div>
+    
+                    <!--category nav-->
+                    <div class="category-nav">
+                        <ul class="category-nav__list">
+                            <li class="category-nav__item">
+                                <a href="#" class="category-nav__link">Новости</a>
+                            </li>
+                            <li class="category-nav__item">
+                                <a href="#" class="category-nav__link">Интервью номера</a>
+                            </li>
+                            <li class="category-nav__item">
+                                <a href="reform.html" class="category-nav__link current">Реформа</a>
+                            </li>
+                            <li class="category-nav__item">
+                                <a href="#" class="category-nav__link">Сообщество</a>
+                            </li>
+                            <li class="category-nav__item">
+                                <a href="article.html" class="category-nav__link">Господдержка</a>
+                            </li>
+                            <li class="category-nav__item">
+                                <a href="#" class="category-nav__link">Анализ</a>
+                            </li>
+                            <li class="category-nav__item">
+                                <a href="#" class="category-nav__link">Опыт</a>
+                            </li>
+                            <li class="category-nav__item">
+                                <a href="#" class="category-nav__link">Маркетинг</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </nav>
+    </div>
+    <div class="header__mobile-close"></div>
+    <button class="header__mobile-button" type="button">Menu</button>
+</header>
+        <!-- end of HEADER-->
+        
+        <!--MAIN-->
+        <main class="main" id="main">
+            <div class="main__inner">
+                <!--main content-->
+                <div class="main__content">
+                    <ul class="breadcrumbs">
+    <li class="breadcrumbs__item">
+        <a href="#">Главная</a>
+    </li>
+    <li class="breadcrumbs__item">
+        <a href="#">Мероприятия журнала</a>
+    </li>
+</ul>
+    
+                    <!--article-->
+                    <article class="article">
+                        <div class="article__title">
+                            <h1>Международный форум <br/>лизинг-специалистов в области автолизинга в Перми</h1>
+                        </div>
+                        
+                        <div class="article__event-data">
+                            <div class="article__event-data-item">
+                                <div class="article__event-data-label">КОГДА</div>
+                                <time class="article__event-data-value" datetime="2018-01-01 00:00:00">13 Апреля / 19:00</time>
+                                <svg class="icon-clock"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-clock"></use></svg>
+                            </div>
+                            <div class="article__event-data-item">
+                                <div class="article__event-data-label">ГДЕ:</div>
+                                <address class="article__event-data-value">Москва, Центральный дом художника, ул. Преображенская 12 , 20, 2-й этаж</address>
+                                <svg class="icon-compass"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-compass"></use></svg>
+                            </div>
+                        </div>
+                        
+                        <div class="article__event-data">
+                            <div class="article__event-data-item">
+                                <div class="article__event-data-label">СПИКЕРЫ:</div>
+                                <ul class="article__event-data-value">
+                                    <li>Александр Михайлов,</li>
+                                    <li>Сергей Моисеев,</li>
+                                    <li>Гарегин Тосунян,</li>
+                                    <li>Татьяна Савельева.</li>
+                                </ul>
+                                <svg class="icon-users"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-users"></use></svg>
+                            </div>
+                        </div>
+                        
+                        <figure class="article__figure">
+                            <img src="images/main-banner.jpg" srcset="images/main-banner@2x.jpg 2x" alt=""/>
+                            <figcaption class="article__figure-caption">Фото: Владимир Соловьев</figcaption>
+                        </figure>
+                        
+                        <div class="article__buttons">
+                            <button class="gray-butn article__download" type="button">
+                                СКАЧАТЬ ПРОГРАММУ
+                                <svg class="icon-download"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-download"></use></svg>
+                            </button>
+                            <button class="gray-butn article__print" type="button">
+                                РАСПЕЧАТАТЬ
+                                <svg class="icon-print"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-print"></use></svg>
+                            </button>
+                        </div>
+                        
+                        <div class="article__content">
+                            <p>Удорожанием в лизинговой сделке называется отношение затраченных сумм к первоначальной стоимости лизингового имущества. Обычно процент удорожания указывается как средний процент удорожания за год.Удорожанием в лизинговой сделке называется отношение затраченных сумм к первоначальной стоимости лизингового имущества. Обычно процент удорожания указывается как средний процент удорожания за год.Удорожанием в лизинговой сделке называется отношение затраченных сумм к первоначальной стоимости лизингового имущества. Обычно процент удорожания указывается как средний процент удорожания за год.</p>
+                            <p>Удорожанием в лизинговой сделке называется отношение затраченных сумм к первоначальной стоимости лизингового имущества. Обычно процент удорожания указывается как средний процент удорожания за год.Удорожанием в лизинговой сделке называется отношение затраченных сумм к первоначальной стоимости лизингового имущества. Обычно процент удорожания указывается как средний процент удорожания за год.</p>
+                            <p>Удорожанием в лизинговой сделке называется отношение затраченных сумм к первоначальной стоимости лизингового имущества. Обычно процент удорожания указывается как средний процент удорожания за год.</p>
+                        </div>
+    
+                        <div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki,twitter,lj"></div>
+                    </article>
+                    <!-- end of article-->
+                </div>
+                
+                <!--sidebar-->
+                <aside class="main__sidebar">
+                    <div class="sidebar-form">
+    <form class="sidebar-form__holder" id="event-registration">
+        <div class="sidebar-form__title">Регистрация<br/>на мероприятие</div>
+        
+        <div class="sidebar-form__content">
+            <div class="input-line">
+                <label class="input-label" for="sidebar-form-name">ФИО</label>
+                <input class="text-input" id="sidebar-form-name" name="name" type="text" data-required="required">
+            </div>
+            <div class="input-line">
+                <label class="input-label" for="sidebar-form-position">Должность</label>
+                <input class="text-input" id="sidebar-form-position" name="position" type="text" data-required="required">
+            </div>
+            <div class="input-line">
+                <label class="input-label" for="sidebar-form-company">Название компании</label>
+                <input class="text-input" id="sidebar-form-company" name="company" type="text" data-required="required">
+            </div>
+            <div class="input-line">
+                <label class="input-label" for="sidebar-form-email">E-mail</label>
+                <input class="text-input" id="sidebar-form-email" name="email" type="email" data-required="required">
+            </div>
+            <div class="input-line">
+                <label class="input-label" for="sidebar-form-tel">Телефон</label>
+                <input class="text-input" id="sidebar-form-tel" name="tel" type="tel" placeholder="8 (_ _ _)- _ _ _-_ _-_ _" data-required="required">
+            </div>
+            <div class="input-line">
+                <label class="input-label" for="sidebar-form-message">Форма для комментария</label>
+                <textarea class="textarea-field" id="sidebar-form-message" name="message" data-required="required"></textarea>
+            </div>
+            <div class="input-line">
+                <div class="file__list"></div>
+                <label class="file__label">
+                    <input class="file visually-hidden" id="sidebar-form-file" type="file" name="file"/>
+                    <svg class="icon-plus"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-plus"></use></svg>
+                    Добавить файл с реквизитами
+                </label>
+            </div>
+            <button class="red-butn" type="submit">ОТПРАВИТЬ</button>
+        </div>
+    </form>
+</div>
+                    <div class="sidebar-banner">
+    <a href="#">
+        <img src="images/aside-banner.jpg" srcset="images/aside-banner@2x.jpg 2x" alt=""/>
+    </a>
+</div>
+                </aside>
+            </div>
+        </main>
+        <!--end of MAIN-->
+        
+        <!--FOOTER-->
+        <!--ANCHOR-->
+<a href="#main" class="page-anchor anchor">
+    <svg class="icon-arrow-up"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow-up"></use></svg>
+    <span class="page-anchor__text">Наверх</span>
+</a>
+
+<!--FOOTER-->
+<footer class="footer">
+    <div class="footer__inner">
+        
+        <div class="footer__left">
+            <small class="footer__copyright">
+                <svg class="icon-adult"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-adult"></use></svg>
+                &copy; Лизинг ревю» 2017-2018 Все права защищены.<br/>
+                Полное или частичное копирование любых материалов сайта возможно только с письменного разрешения редакции журнала «ЛР». Нарушение авторских прав влечет за собой ответственность в соответствии с законодательством РФ. Зарегистрировано Федеральной службой по надзору в сфере связи, информационных технологий и массовых коммуникаций (Роскомнадзор) <br/>
+                <a href="#">Свидетельство о регистрации</a>
+            </small>
+            
+            <ul class="footer__links">
+                <li class="footer__links-item"><a href="#">Правила обработки персональных данных</a></li>
+                <li class="footer__links-item"><a href="#">Карта сайта</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer__right">
+            <div class="subscribe-form">
+    <div class="subscribe-form__label">Подписаться на новости:</div>
+    <form id="subscribe-form" class="subscribe-form__holder">
+        <input class="subscribe-form__input" name="email" type="email" placeholder="Ваш E-mail" data-required="required">
+        
+        <button class="subscribe-form__butn" type="submit">
+            <svg class="icon-arrow-right"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow-right"></use></svg>
+        </button>
+    </form>
+</div>
+            
+            <div class="footer__socials">
+                <a href="#" class="footer__socials-link" target="_blank" rel="nofollow">
+                    <svg class="icon-vk"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-vk"></use></svg>
+                </a>
+                <a href="#" class="footer__socials-link" target="_blank" rel="nofollow">
+                    <svg class="icon-facebook"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-facebook"></use></svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!--STYLE-->
+<link rel="stylesheet" href="css/style.css"/>
+
+<!--JS-->
+<script src="js/main.js"></script>
+<script src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+<script src="//yastatic.net/share2/share.js"></script>
+        <!-- end of FOOTER-->
+    </body>
+</html>

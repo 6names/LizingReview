@@ -1,6 +1,5 @@
 # Folders #
 ######################
-dist/
 src/*.html
 node_modules/
 .idea
