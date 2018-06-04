@@ -3,11 +3,6 @@
     
     &__title {
         @include pageTitle;
-        
-        & + .article__data,
-        & + .article__event-data {
-            border-top: 1px solid $borderLight;
-        }
     }
     
     &__data {
@@ -149,25 +144,6 @@
                 color: $lighterColor;
             }
         }
-    }
-    
-    
-    @media only screen and (max-width: 960px) {
-    
-        &__data,
-        &__figure-caption,
-        &__event-data {
-            margin-left: 15px;
-            margin-right: 15px;
-        }
-    
-        &__buttons,
-        &__content,
-        &__title {
-            padding-left: 15px;
-            padding-right: 15px;
-        }
-        
     }
     
     @media only screen and (max-width: 680px) {

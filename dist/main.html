@@ -2,138 +2,138 @@
 <html lang="ru">
     <head>
         <meta charset="utf-8"/>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.1"/>
-        
-        <title>Главная</title>
-        <meta name="description" content="Project Description"/>
-        <meta name="keywords" content="Project keywords"/>
-        
-        <!--icons-->
-        <link rel="apple-touch-icon" sizes="180x180" href="images/touch/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="images/touch/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="images/touch/favicon-16x16.png">
-        <link rel="manifest" href="images/touch/site.webmanifest">
-        <link rel="mask-icon" href="images/touch/safari-pinned-tab.svg" color="#d42032">
-        <link rel="shortcut icon" href="images/touch/favicon.ico">
-        <meta name="msapplication-TileColor" content="#d42032">
-        <meta name="msapplication-config" content="images/touch/browserconfig.xml">
-        <meta name="theme-color" content="#ffffff">
-        
-        <!--social icons-->
-        <meta property="og:image:height" content="452">
-        <meta property="og:image:width" content="863">
-        <meta property="og:url" content="http://example.com">
-        <meta property="og:image" content="images/touch/og-image.jpg">
-        <meta property="og:description" content="Лизинг ревю - первый в России журнал о лизинге (издается с 1996 года).">
-        <meta property="og:title" content="Лизинг ревю">
-        
-        <style>
-            .main {
-                opacity: 0;
-            }
-        </style>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.1"/>
+
+<title>Главная</title>
+<meta name="description" content="Project Description"/>
+<meta name="keywords" content="Project keywords"/>
+
+<!--icons-->
+<link rel="apple-touch-icon" sizes="180x180" href="images/touch/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/touch/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/touch/favicon-16x16.png">
+<link rel="manifest" href="images/touch/site.webmanifest">
+<link rel="mask-icon" href="images/touch/safari-pinned-tab.svg" color="#d42032">
+<link rel="shortcut icon" href="images/touch/favicon.ico">
+<meta name="msapplication-TileColor" content="#d42032">
+<meta name="msapplication-config" content="images/touch/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+<!--social icons-->
+<meta property="og:image:height" content="452">
+<meta property="og:image:width" content="863">
+<meta property="og:url" content="http://example.com">
+<meta property="og:image" content="images/touch/og-image.jpg">
+<meta property="og:description" content="Лизинг ревю - первый в России журнал о лизинге (издается с 1996 года).">
+<meta property="og:title" content="Лизинг ревю">
+
+<style>
+    .main {
+        opacity: 0;
+    }
+</style>
     </head>
     
     <body>
         
         <!--HEADER-->
         <header class="header">
-            <!--logo-->
-            <div class="header__logo">
-                <div class="header__logo-holder">
-                    <a class="header__logo-link" href="main.html">
-                        <img src="images/ui/logo.svg" width="118" height="47" alt="Лизинг Ревю"/>
-                    </a>
+    <!--logo-->
+    <div class="header__logo">
+        <div class="header__logo-holder">
+            <a class="header__logo-link" href="main.html">
+                <img src="images/ui/logo.svg" width="118" height="47" alt="Лизинг Ревю"/>
+            </a>
+        </div>
+    </div>
+    
+    <div class="header__mobile">
+        <nav class="header__mobile-scroll">
+            <div class="header__mobile-content">
+                
+                <div class="header__top">
+                    <!--search-->
+                    <div class="header__search search">
+                        <form id="form" class="search__form">
+                            <input class="search__input" type="search" title="Поиск">
+                            <button class="search__butn" type="submit">
+                                <svg class="icon-search"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-search"></use></svg>
+                            </button>
+                        </form>
+                    </div>
+        
+                    <!--buttons-->
+                    <div class="header__right">
+                        <button class="gray-butn" type="button">РЕКЛАМОДАТЕЛЯМ</button>
+                        <button class="red-butn modal-trigger" type="button" data-target="subscribe-modal">ПОДПИСКА</button>
+                    </div>
                 </div>
-            </div>
-            
-            <div class="header__mobile">
-                <nav class="header__mobile-scroll">
-                    <div class="header__mobile-content">
-                        
-                        <div class="header__top">
-                            <!--search-->
-                            <div class="header__search search">
-                                <form id="form" class="search__form">
-                                    <input class="search__input" type="search" title="Поиск">
-                                    <button class="search__butn" type="submit">
-                                        <svg class="icon-search"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-search"></use></svg>
-                                    </button>
-                                </form>
-                            </div>
-                            
-                            <!--buttons-->
-                            <div class="header__right">
-                                <button class="gray-butn" type="button">РЕКЛАМОДАТЕЛЯМ</button>
-                                <button class="red-butn modal-trigger" type="button" data-target="subscribe-modal">ПОДПИСКА</button>
-                            </div>
-                        </div>
-                        
-                        <nav class="header__nav">
-                            <!--main nav-->
-                            <div class="main-nav">
-                                <ul class="main-nav__list">
-                                    <li class="main-nav__item">
-                                        <a href="about.html" class="main-nav__link">О журнале</a>
-                                    </li>
-                                    <li class="main-nav__item">
-                                        <a href="magazine-archive.html" class="main-nav__link">Архив журнала</a>
-                                    </li>
-                                    <li class="main-nav__item">
-                                        <a href="events.html" class="main-nav__link">Мероприятия журнала</a>
-                                    </li>
-                                    <li class="main-nav__item">
-                                        <a href="selling.html" class="main-nav__link">Реализация имущества</a>
-                                    </li>
-                                    <li class="main-nav__item">
-                                        <a href="vacancy.html" class="main-nav__link">Вакансии отрасли</a>
-                                    </li>
-                                    <li class="main-nav__item">
-                                        <a href="#" class="main-nav__link modal-trigger" data-target="request-modal">Задать вопрос</a>
-                                    </li>
-                                    <li class="main-nav__item">
-                                        <a href="contacts.html" class="main-nav__link">Контакты</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            
-                            <!--category nav-->
-                            <div class="category-nav">
-                                <ul class="category-nav__list">
-                                    <li class="category-nav__item">
-                                        <a href="#" class="category-nav__link">Новости</a>
-                                    </li>
-                                    <li class="category-nav__item">
-                                        <a href="#" class="category-nav__link">Интервью номера</a>
-                                    </li>
-                                    <li class="category-nav__item">
-                                        <a href="reform.html" class="category-nav__link current">Реформа</a>
-                                    </li>
-                                    <li class="category-nav__item">
-                                        <a href="#" class="category-nav__link">Сообщество</a>
-                                    </li>
-                                    <li class="category-nav__item">
-                                        <a href="article.html" class="category-nav__link">Господдержка</a>
-                                    </li>
-                                    <li class="category-nav__item">
-                                        <a href="#" class="category-nav__link">Анализ</a>
-                                    </li>
-                                    <li class="category-nav__item">
-                                        <a href="#" class="category-nav__link">Опыт</a>
-                                    </li>
-                                    <li class="category-nav__item">
-                                        <a href="#" class="category-nav__link">Маркетинг</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </nav>
+    
+                <nav class="header__nav">
+                    <!--main nav-->
+                    <div class="main-nav">
+                        <ul class="main-nav__list">
+                            <li class="main-nav__item">
+                                <a href="about.html" class="main-nav__link">О журнале</a>
+                            </li>
+                            <li class="main-nav__item">
+                                <a href="magazine-archive.html" class="main-nav__link">Архив журнала</a>
+                            </li>
+                            <li class="main-nav__item">
+                                <a href="events.html" class="main-nav__link">Мероприятия журнала</a>
+                            </li>
+                            <li class="main-nav__item">
+                                <a href="selling.html" class="main-nav__link">Реализация имущества</a>
+                            </li>
+                            <li class="main-nav__item">
+                                <a href="vacancy.html" class="main-nav__link">Вакансии отрасли</a>
+                            </li>
+                            <li class="main-nav__item">
+                                <a href="#" class="main-nav__link modal-trigger" data-target="request-modal">Задать вопрос</a>
+                            </li>
+                            <li class="main-nav__item">
+                                <a href="contacts.html" class="main-nav__link">Контакты</a>
+                            </li>
+                        </ul>
+                    </div>
+    
+                    <!--category nav-->
+                    <div class="category-nav">
+                        <ul class="category-nav__list">
+                            <li class="category-nav__item">
+                                <a href="#" class="category-nav__link">Новости</a>
+                            </li>
+                            <li class="category-nav__item">
+                                <a href="#" class="category-nav__link">Интервью номера</a>
+                            </li>
+                            <li class="category-nav__item">
+                                <a href="reform.html" class="category-nav__link current">Реформа</a>
+                            </li>
+                            <li class="category-nav__item">
+                                <a href="#" class="category-nav__link">Сообщество</a>
+                            </li>
+                            <li class="category-nav__item">
+                                <a href="article.html" class="category-nav__link">Господдержка</a>
+                            </li>
+                            <li class="category-nav__item">
+                                <a href="#" class="category-nav__link">Анализ</a>
+                            </li>
+                            <li class="category-nav__item">
+                                <a href="#" class="category-nav__link">Опыт</a>
+                            </li>
+                            <li class="category-nav__item">
+                                <a href="#" class="category-nav__link">Маркетинг</a>
+                            </li>
+                        </ul>
                     </div>
                 </nav>
             </div>
-            <div class="header__mobile-close"></div>
-            <button class="header__mobile-button" type="button">Menu</button>
-        </header>
+        </nav>
+    </div>
+    <div class="header__mobile-close"></div>
+    <button class="header__mobile-button" type="button">Menu</button>
+</header>
         <!-- end of HEADER-->
         
         <!--MAIN-->
@@ -142,66 +142,67 @@
                 <!--main content-->
                 <div class="main__content">
                     <div class="main-banner">
-                        <div class="main-banner__content">
-                            <div class="main-banner__data">
-                                <div class="main-banner__data-hash"># РЕФОРМА</div>
-                                <time class="main-banner__data-date" datetime="2018-01-01 00:00:00">13 АПРЕЛЯ 2018</time>
-                            </div>
-                            <div class="main-banner__title">
-                                Дорожные машины получили льготу
-                            </div>
-                            <div class="main-banner__text">
-                                Согласно Постановлению Правительства Российской Федерации №518, каждый, кто оформляет лизинг на спецтехнику для коммунальной и дорожно-строительной деятельности, может рассчитывать на скидку от суммы авансового платежа.
-                            </div>
-                        </div>
-                        <picture>
-                            <source media="(max-width:680px)" srcset="images/main-banner-mob.jpg, images/main-banner-mob@2x.jpg 2x"/>
-                            <img src="images/main-banner.jpg" srcset="images/main-banner@2x.jpg 2x" alt=""/>
-                        </picture>
-                        <a href="#" class="main-banner__link">Дорожные машины получили льготу</a>
-                    </div>
-                    
+    <div class="main-banner__content">
+        <div class="main-banner__data">
+            <div class="main-banner__data-hash"># РЕФОРМА</div>
+            <time class="main-banner__data-date" datetime="2018-01-01 00:00:00">13 АПРЕЛЯ 2018</time>
+        </div>
+        <div class="main-banner__title">
+            Дорожные машины получили льготу
+        </div>
+        <div class="main-banner__text">
+            Согласно Постановлению Правительства Российской Федерации №518, каждый, кто оформляет лизинг на спецтехнику для коммунальной и дорожно-строительной деятельности, может рассчитывать на скидку от суммы авансового платежа.
+        </div>
+    </div>
+    <picture>
+      <source media="(max-width:680px)" srcset="images/main-banner-mob.jpg, images/main-banner-mob@2x.jpg 2x"/>
+        <img src="images/main-banner.jpg" srcset="images/main-banner@2x.jpg 2x" alt=""/>
+    </picture>
+    <a href="#" class="main-banner__link">Дорожные машины получили льготу</a>
+</div>
+                
                     <!--news-->
                     <section class="news">
                         <div class="news__title"><h2>Новости</h2></div>
                         <div class="news__list">
                             <!--news items-->
                             <div class="news-preview">
-                                <div class="news-preview__image">
-                                    <img src="images/news-preview-1.jpg" srcset="images/news-preview-1@2x.jpg 2x" alt=""/>
-                                </div>
-                                <div class="news-preview__data">
-                                    
-                                    <div class="news-preview__data-hash"># Новости</div>
-                                    
-                                    <time class="news-preview__data-date" datetime="2018-01-01 00:00:00">13 АПРЕЛЯ 2018</time>
-                                
-                                </div>
-                                <div class="news-preview__title">Журнал «Лизинг ревю» на форуме нефтяников</div>
-                                <div class="news-preview__text">
-                                    Редакция журнала «Лизинг ревю» приняла участие в конференция «Снабжение
-                                    в нефтегазовом комплексе», в рамках которой организаторы подвели итоги ежегодного прямого опроса
-                                </div>
-                                <a href="#" class="news-preview__link">Журнал «Лизинг ревю» на форуме нефтяников</a>
-                            </div>
-                            <div class="news-preview">
-                                <div class="news-preview__image">
-                                    <img src="images/news-preview-2.jpg" srcset="images/news-preview-2@2x.jpg 2x" alt=""/>
-                                </div>
-                                <div class="news-preview__data">
-                                    
-                                    <div class="news-preview__data-hash"># Новости</div>
-                                    
-                                    <time class="news-preview__data-date" datetime="2018-01-01 00:00:00">13 АПРЕЛЯ 2018</time>
-                                
-                                </div>
-                                <div class="news-preview__title">12 вертолетов будут переданы ГТЛК</div>
-                                <div class="news-preview__text">
-                                    Редакция журнала «Лизинг ревю» приняла участие в конференция «Снабжение
-                                    в нефтегазовом комплексе», в рамках которой организаторы подвели итоги ежегодного прямого опроса
-                                </div>
-                                <a href="#" class="news-preview__link">12 вертолетов будут переданы ГТЛК</a>
-                            </div>
+    <div class="news-preview__image">
+        <img src="images/news-preview-1.jpg" srcset="images/news-preview-1@2x.jpg 2x" alt=""/>
+    </div>
+    <div class="news-preview__data">
+        
+            <div class="news-preview__data-hash"># Новости</div>
+        
+        
+            <time class="news-preview__data-date" datetime="2018-01-01 00:00:00">13 АПРЕЛЯ 2018</time>
+        
+    </div>
+    <div class="news-preview__title">Журнал «Лизинг ревю» на форуме нефтяников</div>
+    <div class="news-preview__text">
+        Редакция журнала «Лизинг ревю» приняла участие в конференция «Снабжение
+        в нефтегазовом комплексе», в рамках которой организаторы подвели итоги ежегодного прямого опроса
+    </div>
+    <a href="#" class="news-preview__link">Журнал «Лизинг ревю» на форуме нефтяников</a>
+</div><div class="news-preview">
+    <div class="news-preview__image">
+        <img src="images/news-preview-2.jpg" srcset="images/news-preview-2@2x.jpg 2x" alt=""/>
+    </div>
+    <div class="news-preview__data">
+        
+            <div class="news-preview__data-hash"># Новости</div>
+        
+        
+            <time class="news-preview__data-date" datetime="2018-01-01 00:00:00">13 АПРЕЛЯ 2018</time>
+        
+    </div>
+    <div class="news-preview__title">12 вертолетов будут переданы ГТЛК</div>
+    <div class="news-preview__text">
+        Редакция журнала «Лизинг ревю» приняла участие в конференция «Снабжение
+        в нефтегазовом комплексе», в рамках которой организаторы подвели итоги ежегодного прямого опроса
+    </div>
+    <a href="#" class="news-preview__link">12 вертолетов будут переданы ГТЛК</a>
+</div>
                             <!-- end of news items-->
                         </div>
                         
@@ -212,293 +213,307 @@
                     <!-- end of news-->
                     
                     <div class="content-banner">
-                        <a href="#">
-                            <img src="images/content-banner.jpg" srcset="images/content-banner@2x.jpg 2x" alt=""/>
-                        </a>
-                    </div>
-                    
+    <a href="#">
+        <img src="images/content-banner.jpg" srcset="images/content-banner@2x.jpg 2x" alt=""/>
+    </a>
+</div>
+
                     <!--posts-->
                     <section class="posts">
                         <div class="posts__title"><h2>Выбор читателей</h2></div>
                         <div class="posts__list">
-                            
+    
                             <!--posts items-->
                             <div class="posts-preview">
-                                <div class="posts-preview__image">
-                                    <img src="images/event-preview-1.jpg" srcset="images/event-preview-1@2x.jpg 2x" alt=""/>
-                                </div>
-                                <div class="posts-preview__content">
-                                    <div class="posts-preview__data">
-                                        
-                                        <div class="posts-preview__data-hash"># ИНТЕРВЬЮ НОМЕРА</div>
-                                    
-                                    </div>
-                                    <div class="posts-preview__title">Гарегин Тосунян Ожидание перемен</div>
-                                    <div class="posts-preview__text">
-                                        
-                                        Журнал «Лизинг ревю» завершил статистическое исследование лизинговой отрасли. Теперь мы точно знаем, сколько компаний готовы остаться в отрасли, сколько филиалов работает в республиках
-                                    
-                                    </div>
-                                </div>
-                                <a href="#" class="posts-preview__link">Гарегин Тосунян Ожидание перемен</a>
-                            </div>
-                            <div class="posts-preview">
-                                <div class="posts-preview__image">
-                                    <img src="images/event-preview-2.jpg" srcset="images/event-preview-2@2x.jpg 2x" alt=""/>
-                                </div>
-                                <div class="posts-preview__content">
-                                    <div class="posts-preview__data">
-                                        
-                                        <div class="posts-preview__data-hash"># ИНТЕРВЬЮ НОМЕРА</div>
-                                    
-                                    </div>
-                                    <div class="posts-preview__title">Гарегин Тосунян Ожидание перемен</div>
-                                    <div class="posts-preview__text">
-                                        
-                                        Журнал «Лизинг ревю» завершил статистическое исследование лизинговой отрасли. Теперь мы точно знаем, сколько компаний готовы остаться в отрасли, сколько филиалов работает в республиках
-                                    
-                                    </div>
-                                </div>
-                                <a href="#" class="posts-preview__link">Гарегин Тосунян Ожидание перемен</a>
-                            </div>
-                            <div class="posts-preview">
-                                <div class="posts-preview__image">
-                                    <img src="images/event-preview-3.jpg" srcset="images/event-preview-3@2x.jpg 2x" alt=""/>
-                                </div>
-                                <div class="posts-preview__content">
-                                    <div class="posts-preview__data">
-                                        
-                                        <div class="posts-preview__data-hash"># ИНТЕРВЬЮ НОМЕРА</div>
-                                    
-                                    </div>
-                                    <div class="posts-preview__title">Гарегин Тосунян Ожидание перемен</div>
-                                    <div class="posts-preview__text">
-                                        
-                                        Журнал «Лизинг ревю» завершил статистическое исследование лизинговой отрасли. Теперь мы точно знаем, сколько компаний готовы остаться в отрасли, сколько филиалов работает в республиках
-                                    
-                                    </div>
-                                </div>
-                                <a href="#" class="posts-preview__link">Гарегин Тосунян Ожидание перемен</a>
-                            </div>
-                            <div class="posts-preview">
-                                <div class="posts-preview__image">
-                                    <img src="images/event-preview-4.jpg" srcset="images/event-preview-4@2x.jpg 2x" alt=""/>
-                                </div>
-                                <div class="posts-preview__content">
-                                    <div class="posts-preview__data">
-                                        
-                                        <div class="posts-preview__data-hash"># ИНТЕРВЬЮ НОМЕРА</div>
-                                    
-                                    </div>
-                                    <div class="posts-preview__title">Гарегин Тосунян Ожидание перемен</div>
-                                    <div class="posts-preview__text">
-                                        
-                                        Журнал «Лизинг ревю» завершил статистическое исследование лизинговой отрасли. Теперь мы точно знаем, сколько компаний готовы остаться в отрасли, сколько филиалов работает в республиках
-                                    
-                                    </div>
-                                </div>
-                                <a href="#" class="posts-preview__link">Гарегин Тосунян Ожидание перемен</a>
-                            </div>
-                            <div class="posts-preview">
-                                <div class="posts-preview__image">
-                                    <img src="images/event-preview-5.jpg" srcset="images/event-preview-5@2x.jpg 2x" alt=""/>
-                                </div>
-                                <div class="posts-preview__content">
-                                    <div class="posts-preview__data">
-                                        
-                                        <div class="posts-preview__data-hash"># ИНТЕРВЬЮ НОМЕРА</div>
-                                    
-                                    </div>
-                                    <div class="posts-preview__title">Гарегин Тосунян Ожидание перемен</div>
-                                    <div class="posts-preview__text">
-                                        
-                                        Журнал «Лизинг ревю» завершил статистическое исследование лизинговой отрасли. Теперь мы точно знаем, сколько компаний готовы остаться в отрасли, сколько филиалов работает в республиках
-                                    
-                                    </div>
-                                </div>
-                                <a href="#" class="posts-preview__link">Гарегин Тосунян Ожидание перемен</a>
-                            </div>
-                            <div class="posts-preview">
-                                <div class="posts-preview__image">
-                                    <img src="images/event-preview-6.jpg" srcset="images/event-preview-6@2x.jpg 2x" alt=""/>
-                                </div>
-                                <div class="posts-preview__content">
-                                    <div class="posts-preview__data">
-                                        
-                                        <div class="posts-preview__data-hash"># ИНТЕРВЬЮ НОМЕРА</div>
-                                    
-                                    </div>
-                                    <div class="posts-preview__title">Гарегин Тосунян Ожидание перемен</div>
-                                    <div class="posts-preview__text">
-                                        
-                                        Журнал «Лизинг ревю» завершил статистическое исследование лизинговой отрасли. Теперь мы точно знаем, сколько компаний готовы остаться в отрасли, сколько филиалов работает в республиках
-                                    
-                                    </div>
-                                </div>
-                                <a href="#" class="posts-preview__link">Гарегин Тосунян Ожидание перемен</a>
-                            </div>
-                            <div class="posts-preview">
-                                <div class="posts-preview__image">
-                                    <img src="images/event-preview-7.jpg" srcset="images/event-preview-7@2x.jpg 2x" alt=""/>
-                                </div>
-                                <div class="posts-preview__content">
-                                    <div class="posts-preview__data">
-                                        
-                                        <div class="posts-preview__data-hash"># ИНТЕРВЬЮ НОМЕРА</div>
-                                    
-                                    </div>
-                                    <div class="posts-preview__title">Гарегин Тосунян Ожидание перемен</div>
-                                    <div class="posts-preview__text">
-                                        
-                                        Журнал «Лизинг ревю» завершил статистическое исследование лизинговой отрасли. Теперь мы точно знаем, сколько компаний готовы остаться в отрасли, сколько филиалов работает в республиках
-                                    
-                                    </div>
-                                </div>
-                                <a href="#" class="posts-preview__link">Гарегин Тосунян Ожидание перемен</a>
-                            </div>
+    <div class="posts-preview__image">
+        <img src="images/event-preview-1.jpg" srcset="images/event-preview-1@2x.jpg 2x" alt=""/>
+    </div>
+    <div class="posts-preview__content">
+        <div class="posts-preview__data">
+            
+                <div class="posts-preview__data-hash"># ИНТЕРВЬЮ НОМЕРА</div>
+            
+            
+        </div>
+        <div class="posts-preview__title">Гарегин Тосунян Ожидание перемен</div>
+        <div class="posts-preview__text">
+            
+                Журнал «Лизинг ревю» завершил статистическое исследование лизинговой отрасли. Теперь мы точно знаем, сколько компаний готовы остаться в отрасли, сколько филиалов работает в республиках
+            
+            
+        </div>
+    </div>
+    <a href="#" class="posts-preview__link">Гарегин Тосунян Ожидание перемен</a>
+</div><div class="posts-preview">
+    <div class="posts-preview__image">
+        <img src="images/event-preview-2.jpg" srcset="images/event-preview-2@2x.jpg 2x" alt=""/>
+    </div>
+    <div class="posts-preview__content">
+        <div class="posts-preview__data">
+            
+                <div class="posts-preview__data-hash"># ИНТЕРВЬЮ НОМЕРА</div>
+            
+            
+        </div>
+        <div class="posts-preview__title">Гарегин Тосунян Ожидание перемен</div>
+        <div class="posts-preview__text">
+            
+                Журнал «Лизинг ревю» завершил статистическое исследование лизинговой отрасли. Теперь мы точно знаем, сколько компаний готовы остаться в отрасли, сколько филиалов работает в республиках
+            
+            
+        </div>
+    </div>
+    <a href="#" class="posts-preview__link">Гарегин Тосунян Ожидание перемен</a>
+</div><div class="posts-preview">
+    <div class="posts-preview__image">
+        <img src="images/event-preview-3.jpg" srcset="images/event-preview-3@2x.jpg 2x" alt=""/>
+    </div>
+    <div class="posts-preview__content">
+        <div class="posts-preview__data">
+            
+                <div class="posts-preview__data-hash"># ИНТЕРВЬЮ НОМЕРА</div>
+            
+            
+        </div>
+        <div class="posts-preview__title">Гарегин Тосунян Ожидание перемен</div>
+        <div class="posts-preview__text">
+            
+                Журнал «Лизинг ревю» завершил статистическое исследование лизинговой отрасли. Теперь мы точно знаем, сколько компаний готовы остаться в отрасли, сколько филиалов работает в республиках
+            
+            
+        </div>
+    </div>
+    <a href="#" class="posts-preview__link">Гарегин Тосунян Ожидание перемен</a>
+</div><div class="posts-preview">
+    <div class="posts-preview__image">
+        <img src="images/event-preview-4.jpg" srcset="images/event-preview-4@2x.jpg 2x" alt=""/>
+    </div>
+    <div class="posts-preview__content">
+        <div class="posts-preview__data">
+            
+                <div class="posts-preview__data-hash"># ИНТЕРВЬЮ НОМЕРА</div>
+            
+            
+        </div>
+        <div class="posts-preview__title">Гарегин Тосунян Ожидание перемен</div>
+        <div class="posts-preview__text">
+            
+                Журнал «Лизинг ревю» завершил статистическое исследование лизинговой отрасли. Теперь мы точно знаем, сколько компаний готовы остаться в отрасли, сколько филиалов работает в республиках
+            
+            
+        </div>
+    </div>
+    <a href="#" class="posts-preview__link">Гарегин Тосунян Ожидание перемен</a>
+</div><div class="posts-preview">
+    <div class="posts-preview__image">
+        <img src="images/event-preview-5.jpg" srcset="images/event-preview-5@2x.jpg 2x" alt=""/>
+    </div>
+    <div class="posts-preview__content">
+        <div class="posts-preview__data">
+            
+                <div class="posts-preview__data-hash"># ИНТЕРВЬЮ НОМЕРА</div>
+            
+            
+        </div>
+        <div class="posts-preview__title">Гарегин Тосунян Ожидание перемен</div>
+        <div class="posts-preview__text">
+            
+                Журнал «Лизинг ревю» завершил статистическое исследование лизинговой отрасли. Теперь мы точно знаем, сколько компаний готовы остаться в отрасли, сколько филиалов работает в республиках
+            
+            
+        </div>
+    </div>
+    <a href="#" class="posts-preview__link">Гарегин Тосунян Ожидание перемен</a>
+</div><div class="posts-preview">
+    <div class="posts-preview__image">
+        <img src="images/event-preview-6.jpg" srcset="images/event-preview-6@2x.jpg 2x" alt=""/>
+    </div>
+    <div class="posts-preview__content">
+        <div class="posts-preview__data">
+            
+                <div class="posts-preview__data-hash"># ИНТЕРВЬЮ НОМЕРА</div>
+            
+            
+        </div>
+        <div class="posts-preview__title">Гарегин Тосунян Ожидание перемен</div>
+        <div class="posts-preview__text">
+            
+                Журнал «Лизинг ревю» завершил статистическое исследование лизинговой отрасли. Теперь мы точно знаем, сколько компаний готовы остаться в отрасли, сколько филиалов работает в республиках
+            
+            
+        </div>
+    </div>
+    <a href="#" class="posts-preview__link">Гарегин Тосунян Ожидание перемен</a>
+</div><div class="posts-preview">
+    <div class="posts-preview__image">
+        <img src="images/event-preview-7.jpg" srcset="images/event-preview-7@2x.jpg 2x" alt=""/>
+    </div>
+    <div class="posts-preview__content">
+        <div class="posts-preview__data">
+            
+                <div class="posts-preview__data-hash"># ИНТЕРВЬЮ НОМЕРА</div>
+            
+            
+        </div>
+        <div class="posts-preview__title">Гарегин Тосунян Ожидание перемен</div>
+        <div class="posts-preview__text">
+            
+                Журнал «Лизинг ревю» завершил статистическое исследование лизинговой отрасли. Теперь мы точно знаем, сколько компаний готовы остаться в отрасли, сколько филиалов работает в республиках
+            
+            
+        </div>
+    </div>
+    <a href="#" class="posts-preview__link">Гарегин Тосунян Ожидание перемен</a>
+</div>
                             <!-- end of posts items-->
-                        
+                            
                         </div>
-                        
+        
                         <div class="posts__more">
                             <button class="gray-butn" type="button">ПОКАЗАТЬ ЕЩЕ</button>
                         </div>
                     </section>
                     <!-- end of posts-->
-                
+                    
                 </div>
-                
+    
                 <!--sidebar-->
                 <aside class="main__sidebar">
                     <div class="sidebar-banner">
-                        <a href="#">
-                            <img src="images/aside-banner.jpg" srcset="images/aside-banner@2x.jpg 2x" alt=""/>
-                        </a>
-                    </div>
+    <a href="#">
+        <img src="images/aside-banner.jpg" srcset="images/aside-banner@2x.jpg 2x" alt=""/>
+    </a>
+</div>
                     
                     <!--sidebar magazine-->
                     <div class="magazine-preview">
-                        <div class="magazine-preview__top">
-                            <div class="magazine-preview__image">
-                                <div class="magazine-preview__image-holder">
-                                    <img src="images/magazine-preview-1.jpg" srcset="images/magazine-preview-1@2x.jpg 2x" alt=""/>
-                                </div>
-                            
-                            </div>
-                            
-                            <div class="magazine-preview__title">Свежий номер # 4</div>
-                            <a href="#" class="magazine-preview__link">Свежий номер # 4</a>
-                        </div>
-                        
-                        <div class="magazine-preview__slider">
-                            <div class="magazine-preview__slide">
-                                <div class="magazine-preview__slide-holder">
-                                    <div class="magazine-preview__data">
-                                        
-                                        <div class="magazine-preview__data-hash"># анализ</div>
-                                        
-                                        <time class="magazine-preview__data-date" datetime="2018-01-01 00:00:00">13 АПРЕЛЯ 2018</time>
-                                    
-                                    </div>
-                                    <div class="magazine-preview__slide-title">Жизненный элексир продаж</div>
-                                    <div class="magazine-preview__text">
-                                        Как в алхимии главной загадкой является перерождение металлов взолото, так внауке иискусстве продаж центральной темой остаются поиск, перековка
-                                    </div>
-                                    <a href="#" class="magazine-preview__link">Свежий номер # 4</a>
-                                </div>
-                            </div>
-                            <div class="magazine-preview__slide">
-                                <div class="magazine-preview__slide-holder">
-                                    <div class="magazine-preview__data">
-                                        
-                                        <div class="magazine-preview__data-hash"># анализ</div>
-                                        
-                                        <time class="magazine-preview__data-date" datetime="2018-01-01 00:00:00">13 АПРЕЛЯ 2018</time>
-                                    
-                                    </div>
-                                    <div class="magazine-preview__slide-title">Жизненный элексир</div>
-                                    <div class="magazine-preview__text">
-                                        Редакция журнала «Лизинг ревю» приняла участие в конференция «Снабжение
-                                        в нефтегазовом комплексе»
-                                    </div>
-                                    <a href="#" class="magazine-preview__link">Свежий номер # 4</a>
-                                </div>
-                            </div>
-                            <div class="magazine-preview__slide">
-                                <div class="magazine-preview__slide-holder">
-                                    <div class="magazine-preview__data">
-                                        
-                                        <div class="magazine-preview__data-hash"># анализ</div>
-                                        
-                                        <time class="magazine-preview__data-date" datetime="2018-01-01 00:00:00">13 АПРЕЛЯ 2018</time>
-                                    
-                                    </div>
-                                    <div class="magazine-preview__slide-title">Жизненный элексир продаж</div>
-                                    <div class="magazine-preview__text">
-                                        Как в алхимии главной загадкой является перерождение металлов взолото, так внауке иискусстве продаж центральной темой остаются поиск, перековка
-                                    </div>
-                                    <a href="#" class="magazine-preview__link">Свежий номер # 4</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end of sidebar magazine-->
+    <div class="magazine-preview__top">
+        <div class="magazine-preview__image">
+            <div class="magazine-preview__image-holder">
+                <img src="images/magazine-preview-1.jpg" srcset="images/magazine-preview-1@2x.jpg 2x" alt=""/>
+            </div>
+    
+            
+        </div>
+    
+        <div class="magazine-preview__title">Свежий номер # 4</div>
+        <a href="#" class="magazine-preview__link">Свежий номер # 4</a>
+    </div>
+    
+    <div class="magazine-preview__slider">
+        <div class="magazine-preview__slide">
+            <div class="magazine-preview__slide-holder">
+                <div class="magazine-preview__data">
                     
+                    <div class="magazine-preview__data-hash"># анализ</div>
+                    
+                    
+                    <time class="magazine-preview__data-date" datetime="2018-01-01 00:00:00">13 АПРЕЛЯ 2018</time>
+                    
+                </div>
+                <div class="magazine-preview__slide-title">Жизненный элексир продаж</div>
+                <div class="magazine-preview__text">
+                    Как в алхимии главной загадкой является перерождение металлов взолото, так внауке иискусстве продаж центральной темой остаются поиск, перековка
+                </div>
+                <a href="#" class="magazine-preview__link">Свежий номер # 4</a>
+            </div>
+        </div>
+        <div class="magazine-preview__slide">
+            <div class="magazine-preview__slide-holder">
+                <div class="magazine-preview__data">
+                    
+                    <div class="magazine-preview__data-hash"># анализ</div>
+                    
+                    
+                    <time class="magazine-preview__data-date" datetime="2018-01-01 00:00:00">13 АПРЕЛЯ 2018</time>
+                    
+                </div>
+                <div class="magazine-preview__slide-title">Жизненный элексир</div>
+                <div class="magazine-preview__text">
+                    Редакция журнала «Лизинг ревю» приняла участие в конференция «Снабжение
+                    в нефтегазовом комплексе»
+                </div>
+                <a href="#" class="magazine-preview__link">Свежий номер # 4</a>
+            </div>
+        </div>
+        <div class="magazine-preview__slide">
+            <div class="magazine-preview__slide-holder">
+                <div class="magazine-preview__data">
+                    
+                    <div class="magazine-preview__data-hash"># анализ</div>
+                    
+                    
+                    <time class="magazine-preview__data-date" datetime="2018-01-01 00:00:00">13 АПРЕЛЯ 2018</time>
+                    
+                </div>
+                <div class="magazine-preview__slide-title">Жизненный элексир продаж</div>
+                <div class="magazine-preview__text">
+                    Как в алхимии главной загадкой является перерождение металлов взолото, так внауке иискусстве продаж центральной темой остаются поиск, перековка
+                </div>
+                <a href="#" class="magazine-preview__link">Свежий номер # 4</a>
+            </div>
+        </div>
+    </div>
+</div>
+                    <!-- end of sidebar magazine-->
+
                     <div class="sidebar-banner">
-                        <a href="#">
-                            <img src="images/aside-banner.jpg" srcset="images/aside-banner@2x.jpg 2x" alt=""/>
-                        </a>
-                    </div>
+    <a href="#">
+        <img src="images/aside-banner.jpg" srcset="images/aside-banner@2x.jpg 2x" alt=""/>
+    </a>
+</div>
                     
                     <div class="event-preview">
-                        <a href="#" class="event-preview__all">
-                            Мероприятия журнала
-                        </a>
-                        
-                        <div class="event-preview__slider">
-                            <div class="event-preview__slide">
-                                <div class="event-preview__image">
-                                    <img src="images/aside-event.jpg" srcset="images/aside-event@2x.jpg 2x" alt=""/>
-                                </div>
-                                
-                                <div class="event-preview__content">
-                                    <div class="event-preview__data">
-                                        
-                                        <time class="event-preview__data-date" datetime="2018-01-01 00:00:00">13 АПРЕЛЯ 2018</time>
-                                    
-                                    </div>
-                                    <div class="event-preview__title">Сбор лизингоых компаний Саратовской области</div>
-                                    <div class="event-preview__text">
-                                        Спикеры:
-                                        <br/>Александр Михайлов, Сергей Моисеев, Гарегин Тосунян, Татьяна
-                                        Савельева.
-                                    </div>
-                                </div>
-                                <a href="#" class="event-preview__link">Сбор лизингоых компаний Саратовской области</a>
-                            </div>
-                            <div class="event-preview__slide">
-                                <div class="event-preview__image">
-                                    <img src="images/aside-event.jpg" srcset="images/aside-event@2x.jpg 2x" alt=""/>
-                                </div>
-                                
-                                <div class="event-preview__content">
-                                    <div class="event-preview__data">
-                                        
-                                        <time class="event-preview__data-date" datetime="2018-01-01 00:00:00">13 АПРЕЛЯ 2018</time>
-                                    
-                                    </div>
-                                    <div class="event-preview__title">Сбор лизингоых компаний Саратовской области</div>
-                                    <div class="event-preview__text">
-                                        Спикеры:
-                                        <br/>Александр Михайлов, Сергей Моисеев, Гарегин Тосунян, Татьяна
-                                        Савельева.
-                                    </div>
-                                </div>
-                                <a href="#" class="event-preview__link">Сбор лизингоых компаний Саратовской области</a>
-                            </div>
-                        </div>
-                    </div>
-                
+    <a href="#" class="event-preview__all">
+        Мероприятия журнала
+    </a>
+    
+    <div class="event-preview__slider">
+        <div class="event-preview__slide">
+            <div class="event-preview__image">
+                <img src="images/aside-event.jpg" srcset="images/aside-event@2x.jpg 2x" alt=""/>
+            </div>
+    
+            <div class="event-preview__content">
+                <div class="event-preview__data">
+                    
+                    
+                    <time class="event-preview__data-date" datetime="2018-01-01 00:00:00">13 АПРЕЛЯ 2018</time>
+                    
+                </div>
+                <div class="event-preview__title">Сбор лизингоых компаний Саратовской области</div>
+                <div class="event-preview__text">
+                    Спикеры:
+                    <br/>Александр Михайлов, Сергей Моисеев, Гарегин Тосунян, Татьяна
+                    Савельева.
+                </div>
+            </div>
+            <a href="#" class="event-preview__link">Сбор лизингоых компаний Саратовской области</a>
+        </div>
+        <div class="event-preview__slide">
+            <div class="event-preview__image">
+                <img src="images/aside-event.jpg" srcset="images/aside-event@2x.jpg 2x" alt=""/>
+            </div>
+    
+            <div class="event-preview__content">
+                <div class="event-preview__data">
+                    
+                    
+                    <time class="event-preview__data-date" datetime="2018-01-01 00:00:00">13 АПРЕЛЯ 2018</time>
+                    
+                </div>
+                <div class="event-preview__title">Сбор лизингоых компаний Саратовской области</div>
+                <div class="event-preview__text">
+                    Спикеры:
+                    <br/>Александр Михайлов, Сергей Моисеев, Гарегин Тосунян, Татьяна
+                    Савельева.
+                </div>
+            </div>
+            <a href="#" class="event-preview__link">Сбор лизингоых компаний Саратовской области</a>
+        </div>
+    </div>
+</div>
+                    
                 </aside>
             </div>
         </main>
@@ -506,64 +521,60 @@
         
         <!--FOOTER-->
         <!--ANCHOR-->
-        <a href="#main" class="page-anchor anchor">
-            <svg class="icon-arrow-up"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow-up"></use></svg>
-            <span class="page-anchor__text">Наверх</span>
-        </a>
+<a href="#main" class="page-anchor anchor">
+    <svg class="icon-arrow-up"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow-up"></use></svg>
+    <span class="page-anchor__text">Наверх</span>
+</a>
+
+<!--FOOTER-->
+<footer class="footer">
+    <div class="footer__inner">
         
-        <!--FOOTER-->
-        <footer class="footer">
-            <div class="footer__inner">
-                
-                <div class="footer__left">
-                    <small class="footer__copyright">
-                        <svg class="icon-adult"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-adult"></use></svg>
-                        &copy; Лизинг ревю» 2017-2018 Все права защищены.<br/>
-                        Полное или частичное копирование любых материалов сайта возможно только с письменного разрешения редакции журнала «ЛР». Нарушение авторских прав влечет за собой ответственность в соответствии с законодательством РФ. Зарегистрировано Федеральной службой по надзору в сфере связи, информационных технологий и массовых коммуникаций (Роскомнадзор) <br/>
-                        <a href="#">Свидетельство о регистрации</a>
-                    </small>
-                    
-                    <ul class="footer__links">
-                        <li class="footer__links-item">
-                            <a href="#">Правила обработки персональных данных</a>
-                        </li>
-                        <li class="footer__links-item">
-                            <a href="#">Карта сайта</a>
-                        </li>
-                    </ul>
-                </div>
-                
-                <div class="footer__right">
-                    <div class="subscribe-form">
-                        <div class="subscribe-form__label">Подписаться на новости:</div>
-                        <form id="subscribe-form" class="subscribe-form__holder">
-                            <input class="subscribe-form__input" name="email" type="email" placeholder="Ваш E-mail" data-required="required">
-                            
-                            <button class="subscribe-form__butn" type="submit">
-                                <svg class="icon-arrow-right"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow-right"></use></svg>
-                            </button>
-                        </form>
-                    </div>
-                    
-                    <div class="footer__socials">
-                        <a href="#" class="footer__socials-link" target="_blank" rel="nofollow">
-                            <svg class="icon-vk"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-vk"></use></svg>
-                        </a>
-                        <a href="#" class="footer__socials-link" target="_blank" rel="nofollow">
-                            <svg class="icon-facebook"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-facebook"></use></svg>
-                        </a>
-                    </div>
-                </div>
+        <div class="footer__left">
+            <small class="footer__copyright">
+                <svg class="icon-adult"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-adult"></use></svg>
+                &copy; Лизинг ревю» 2017-2018 Все права защищены.<br/>
+                Полное или частичное копирование любых материалов сайта возможно только с письменного разрешения редакции журнала «ЛР». Нарушение авторских прав влечет за собой ответственность в соответствии с законодательством РФ. Зарегистрировано Федеральной службой по надзору в сфере связи, информационных технологий и массовых коммуникаций (Роскомнадзор) <br/>
+                <a href="#">Свидетельство о регистрации</a>
+            </small>
+            
+            <ul class="footer__links">
+                <li class="footer__links-item"><a href="#">Правила обработки персональных данных</a></li>
+                <li class="footer__links-item"><a href="#">Карта сайта</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer__right">
+            <div class="subscribe-form">
+    <div class="subscribe-form__label">Подписаться на новости:</div>
+    <form id="subscribe-form" class="subscribe-form__holder">
+        <input class="subscribe-form__input" name="email" type="email" placeholder="Ваш E-mail" data-required="required">
+        
+        <button class="subscribe-form__butn" type="submit">
+            <svg class="icon-arrow-right"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow-right"></use></svg>
+        </button>
+    </form>
+</div>
+            
+            <div class="footer__socials">
+                <a href="#" class="footer__socials-link" target="_blank" rel="nofollow">
+                    <svg class="icon-vk"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-vk"></use></svg>
+                </a>
+                <a href="#" class="footer__socials-link" target="_blank" rel="nofollow">
+                    <svg class="icon-facebook"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-facebook"></use></svg>
+                </a>
             </div>
-        </footer>
-        
-        <!--STYLE-->
-        <link rel="stylesheet" href="css/style.css"/>
-        
-        <!--JS-->
-        <script src="js/main.js"></script>
-        <script src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
-        <script src="//yastatic.net/share2/share.js"></script>
+        </div>
+    </div>
+</footer>
+
+<!--STYLE-->
+<link rel="stylesheet" href="css/style.css"/>
+
+<!--JS-->
+<script src="js/main.js"></script>
+<script src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+<script src="//yastatic.net/share2/share.js"></script>
         <!-- end of FOOTER-->
     </body>
 </html>

@@ -412,6 +412,27 @@ a.red-butn {
     width: calc(67.3% - 25px);
     margin-top: 40px;
     margin-bottom: 40px; }
+    .main__content_wide {
+      width: 100%; }
+  .main__title {
+    margin-bottom: 29px;
+    font-size: 44px;
+    font-family: "Bandera Pro", Arial, Helvetica, sans-serif;
+    line-height: 1.05em;
+    color: #d42032; }
+    .main__title + .article__data,
+    .main__title + .article__event-data {
+      border-top: 1px solid #efefef; }
+  .main__holder {
+    position: relative; }
+    .main__holder-inner {
+      position: relative;
+      max-width: 1208px;
+      padding-left: 30px;
+      padding-right: 30px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 40px; }
 
 .sidebar__butn {
   width: 100%;
@@ -441,6 +462,28 @@ a.red-butn {
 
 .ui-icons {
   display: none; }
+
+.site-map {
+  font-size: 19px;
+  line-height: 1.4em;
+  color: #535555;
+  font-weight: 600; }
+  .site-map a {
+    color: #000000;
+    text-decoration: underline; }
+    .site-map a:hover {
+      color: #d42032;
+      text-decoration: none; }
+  .site-map > li {
+    margin-bottom: 5px; }
+    .site-map > li > ul {
+      margin-top: 5px;
+      margin-bottom: 15px;
+      margin-left: 15px; }
+      .site-map > li > ul a {
+        color: #535555; }
+        .site-map > li > ul a:hover {
+          color: #d42032; }
 
 .site-links {
   padding: 100px 0; }
@@ -1166,9 +1209,6 @@ a.red-butn {
     font-family: "Bandera Pro", Arial, Helvetica, sans-serif;
     line-height: 1.05em;
     color: #d42032; }
-    .article__title + .article__data,
-    .article__title + .article__event-data {
-      border-top: 1px solid #efefef; }
   .article__data {
     display: flex;
     align-items: center;
@@ -1536,7 +1576,7 @@ a.red-butn {
     margin-bottom: 30px;
     font-size: 34px;
     border-top: 1px solid #d9d9d9; }
-  .error-block [class*="butn"] {
+  .error-block__butn {
     width: 100%;
     max-width: 175px; }
 
@@ -1563,7 +1603,7 @@ a.red-butn {
       display: inline-block; }
     .contacts__item:not(:first-child) {
       margin-top: 10px; }
-  .contacts [class*="butn"] {
+  .contacts__butn {
     width: 100%;
     max-width: 175px; }
 
@@ -2288,6 +2328,12 @@ a.red-butn {
       .main__inner {
         padding-left: 15px;
         padding-right: 15px; }
+      .main__title {
+        margin-bottom: 15px;
+        font-size: 36px; }
+        .main__holder-inner {
+          padding-left: 15px;
+          padding-right: 15px; }
     .main {
       padding-top: 45px; }
       .main__sidebar {
@@ -2296,6 +2342,8 @@ a.red-butn {
       .main__content {
         margin-top: 20px;
         width: calc(70% - 10px); }
+        .main__content_wide {
+          width: 100%; }
       .header__top {
         padding-left: 15px;
         padding-right: 15px; }
@@ -2600,6 +2648,9 @@ a.red-butn {
     .main__content {
       margin-top: 0;
       width: 100%; }
+    .main__holder {
+      padding-left: 15px;
+      padding-right: 15px; }
     .sidebar__butn {
       margin-top: 26px;
       margin-bottom: 38px; }
@@ -2628,12 +2679,6 @@ a.red-butn {
           margin-bottom: 30px; }
       .posts__search-request {
         margin-bottom: 30px; }
-    .article__data, .article__figure-caption, .article__event-data {
-      margin-left: 15px;
-      margin-right: 15px; }
-    .article__buttons, .article__content, .article__title {
-      padding-left: 15px;
-      padding-right: 15px; }
   .vacancy {
     padding-left: 15px;
     padding-right: 15px; }
@@ -2658,10 +2703,7 @@ a.red-butn {
       padding-right: 15px; }
       .contacts .breadcrumbs {
         padding-left: 0;
-        padding-right: 0; }
-  .accordion__title {
-    margin-left: 15px;
-    margin-right: 15px; } }
+        padding-right: 0; } }
   @media only screen and (max-width: 768px) {
     .magazine__list .sidebar-banner,
     .magazine__list .magazine-preview {
@@ -2703,6 +2745,9 @@ a.red-butn {
     font-size: 18px; }
     .tariff {
       margin-bottom: 20px; }
+      .main__title {
+        margin-bottom: 10px;
+        font-size: 24px; }
     .main {
       padding-bottom: 0; }
       .main__sidebar {
@@ -2716,6 +2761,9 @@ a.red-butn {
       .main__sidebar {
         padding-left: 0;
         padding-right: 0; }
+    .site-map {
+      font-size: 16px;
+      line-height: 1.35em; }
     .sidebar-banner {
       margin-bottom: 40px;
       padding-left: 15px;

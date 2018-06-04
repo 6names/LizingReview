@@ -28,6 +28,42 @@
         width: calc(67.3% - 25px);
         margin-top: 40px;
         margin-bottom: 40px;
+        
+        &_wide {
+            width: 100%;
+        }
+    }
+    
+    &__title {
+        margin-bottom: 29px;
+        font-size: 44px;
+        font-family: $secondFont;
+        line-height: 1.05em;
+        color: $theme;
+    
+        & + .article__data,
+        & + .article__event-data {
+            border-top: 1px solid $borderLight;
+        }
+    
+        @media only screen and (max-width: 1024px) {
+            margin-bottom: 15px;
+            font-size: 36px;
+        }
+    
+        @media only screen and (max-width: 680px) {
+            margin-bottom: 10px;
+            font-size: 24px;
+        }
+    }
+    
+    &__holder {
+        position: relative;
+        
+        &-inner {
+            @include inner();
+            margin-top: 40px;
+        }
     }
     
     @media only screen and (max-width: 1024px) {
@@ -41,6 +77,10 @@
         &__content {
             margin-top: 20px;
             width: calc(70% - 10px);
+    
+            &_wide {
+                width: 100%;
+            }
         }
     }
     
@@ -70,6 +110,11 @@
         &__content {
             margin-top: 0;
             width: 100%;
+        }
+    
+        &__holder {
+            padding-left: 15px;
+            padding-right: 15px;
         }
     }
     
@@ -136,6 +181,39 @@
 
 .ui-icons {
     display: none;
+}
+
+.site-map {
+    @include previewText;
+    font-weight: 600;
+    
+    a {
+        color: $mainColor;
+        text-decoration: underline;
+        
+        &:hover {
+            color: $theme;
+            text-decoration: none;
+        }
+    }
+    
+    & > li {
+        margin-bottom: 5px;
+        
+        & > ul {
+            margin-top: 5px;
+            margin-bottom: 15px;
+            margin-left: 15px;
+            
+            a {
+                color: $lightColor;
+                
+                &:hover {
+                    color: $theme;
+                }
+            }
+        }
+    }
 }
 
 //site links

@@ -21709,7 +21709,7 @@ window.addEventListener('resize', function () {
 function windowResize() {
     if (sidebarBtn) {
         if (window.innerWidth <= 960) {
-            document.querySelector('[class*="__main-title"]').insertAdjacentElement('afterend', sidebarBtn);
+            document.querySelector('.main__title').insertAdjacentElement('afterend', sidebarBtn);
         } else {
             document.querySelector('.main__sidebar').insertAdjacentElement('afterbegin', sidebarBtn);
         }
