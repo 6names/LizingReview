@@ -1743,7 +1743,7 @@ a.red-butn {
       background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAATCAYAAABobNZCAAAB+klEQVRIiaXVT4hNYRjH8c+9ZKWkmEmG5i6ocZRy7YSoQSaRsLGZhQ0LhZI/KQtqhoUF2ZMVFtLEMDT+FU2dou6VhTpSUkhMxpRmYnHures6595z7zyb03l/z/t83+d9z/m9uVL3ajVxEnMrz0wRRGGmvHKhOA83cSSIwhLkK1oOp3EOJ3A8KzwjuANP0It75UKxUIXncRlnavLP4lTN4mYCXohhrKoMdeFZuVDsmY3zOFg3Z1ZlAVMYnAG4E0+xvE5ajBvVrt+kzB/AUW3sQLlQXIKHCWD4hcE83mMzSil1LuBQi+D5eISVKSn7gii8Xu3oIzbgbUJiDhdxOCO4G8+xLEGewJ4gCm/z73Z+wxa8Sqk7gANNwAswhBUJ8jT6gyi8VR2oP8sP2Ih3CZPn4EraAipnPIYgQZ7CjlpwEhy+Yx3S3OMS9ouPowruEv9OhYT8SezF3XohV+dwtdGBx+hJ0P6gH9fQKe54aUqdviAK/wPT+Bf6jLV4naDlcBXHMJICHse2NDCNO6/GItzBmmaJNTGNnUEUDjVKymIen7Be8g4kxU9xxw3BWeHEH00vXjbJm8LuIAofZCnaim1+wVbpPjAp7vh+1oKtevYPsROO1Y1PYFcQhSOtFGvnyhxHH15U3n9jexCFw60Wave+/opNGBU712g7Rf4CsNKDY+k/gLgAAAAASUVORK5CYII=");
       background-size: 10px 6px;
       transition: all 0.2s; }
-    .select__value-active:before {
+    .select__value_active:before {
       transform: translate3d(0, -3px, 0) rotate(180deg); }
   .select.error .select__value {
     border-color: #d42032; }
@@ -1760,7 +1760,7 @@ a.red-butn {
     overflow-x: hidden;
     overflow-y: auto;
     box-shadow: 0 1px 7px rgba(0, 0, 0, 0.3); }
-    .select__list-active {
+    .select__list_active {
       display: block; }
   .select__option {
     padding-top: 5px;
@@ -1771,7 +1771,7 @@ a.red-butn {
     transition: all 0.2s; }
     .select__option:hover {
       background: rgba(0, 0, 0, 0.1); }
-    .select__option-active:hover, .select__option-active {
+    .select__option_active:hover, .select__option_active {
       background: #d42032;
       color: #ffffff;
       cursor: default; }
@@ -2175,9 +2175,12 @@ a.red-butn {
   z-index: 999;
   max-height: 100%;
   overflow: auto;
+  opacity: 0;
   -webkit-overflow-scrolling: touch; }
+  .modal:not(.visually-hidden) {
+    opacity: 1;
+    transition: 0.5s; }
   .modal-holder {
-    background: rgba(0, 0, 0, 0.5);
     opacity: 0;
     transition: opacity 0.35s; }
     .modal-holder_active {
@@ -2215,7 +2218,8 @@ a.red-butn {
     width: 100%;
     height: 100%;
     min-width: 100%;
-    min-height: 100%; }
+    min-height: 100%;
+    background: rgba(0, 0, 0, 0.5); }
     .modal__close_wide:before {
       position: absolute;
       content: '';

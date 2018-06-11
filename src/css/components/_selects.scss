@@ -33,7 +33,7 @@
             transition: all 0.2s;
         }
         
-        &-active:before {
+        &_active:before {
             transform: translate3d(0, -3px, 0) rotate(180deg);
         }
     }
@@ -58,7 +58,7 @@
         overflow-y: auto;
         box-shadow: 0 1px 7px rgba($black, 0.3);
         
-        &-active {
+        &_active {
             display: block;
         }
     }
@@ -75,8 +75,8 @@
             background: rgba($black, 0.1);
         }
         
-        &-active:hover,
-        &-active {
+        &_active:hover,
+        &_active {
             background: $theme;
             color: $white;
             cursor: default;
@@ -85,5 +85,6 @@
         &[data-val="empty"] {
             display: none;
         }
+        
     }
 }
