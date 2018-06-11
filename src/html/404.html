@@ -15,25 +15,27 @@
         <!--MAIN-->
         <main class="main" id="main">
             <div class="main__inner">
-
-                <!--error-block-->
-                <article class="error-block">
+    
+                <div class="main__content main__content_wide">
                     @@include('./components/breadcrumbs.html', {
                     "current" : "Ошибка 404"
                     })
-                    
-                    <div class="error-block__title">
-                        <h1>Ошибка 404</h1>
-                    </div>
-                    
-                    <div class="error-block__text">
-                        Эта страница удалена или никогда <br/> не существовала
-                    </div>
-                    
-                    <a href="main.html" class="red-butn">НА Главную</a>
+
+                    <!--error-block-->
+                    <article class="main__holder">
+                        <div class="main__title">
+                            <h1>Ошибка 404</h1>
+                        </div>
+        
+                        <div class="error-block__text">
+                            Эта страница удалена или никогда <br/> не существовала
+                        </div>
+        
+                        <a href="main.html" class="red-butn error-block__butn">НА Главную</a>
     
-                </article>
-                <!-- end of error-block-->
+                    </article>
+                    <!-- end of error-block-->
+                </div>
                 
             </div>
         </main>

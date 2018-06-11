@@ -15,37 +15,38 @@
         <!--MAIN-->
         <main class="main" id="main">
             <div class="main__inner">
-                
-                <!--contacts-->
-                <article class="contacts">
+    
+                <div class="main__content main__content_wide">
                     @@include('./components/breadcrumbs.html', {
                     "current" : "Контакты"
                     })
-                    
-                    <div class="contacts__title">
-                        <h1>Контакты</h1>
-                    </div>
-                    
-                    <ul class="contacts__list">
-                        <li class="contacts__item">
-                            Адрес:
-                            <address>Москва Габричевского Ул., дом 10/4, кв. 406</address>
-                        </li>
-                        <li class="contacts__item">
-                            Телефон:
-                            <a href="tel:74991825623" class="call-to">+7(499)182-56-23</a>
-                        </li>
-                        <li class="contacts__item">
-                            Email:
-                            <a href="mailto:email.fake@gmail.com" class="mail-to">email.fake@gmail.com</a>
-                        </li>
-                    </ul>
-                    
-                    <a href="main.html" class="red-butn modal-trigger" data-target="request-modal">Связаться с нами</a>
-                
-                </article>
-                <!-- end of contacts-->
-            
+
+                    <!--contacts-->
+                    <article class="main__holder">
+                        <div class="main__title">
+                            <h1>Контакты</h1>
+                        </div>
+        
+                        <ul class="contacts__list">
+                            <li class="contacts__item">
+                                Адрес:
+                                <address>Москва Габричевского Ул., дом 10/4, кв. 406</address>
+                            </li>
+                            <li class="contacts__item">
+                                Телефон:
+                                <a href="tel:74991825623" class="call-to">+7(499)182-56-23</a>
+                            </li>
+                            <li class="contacts__item">
+                                Email:
+                                <a href="mailto:email.fake@gmail.com" class="mail-to">email.fake@gmail.com</a>
+                            </li>
+                        </ul>
+        
+                        <a href="main.html" class="red-butn modal-trigger contacts__butn" data-target="request-modal">Связаться с нами</a>
+    
+                    </article>
+                    <!-- end of contacts-->
+                </div>
             </div>
         </main>
         <!--end of MAIN-->

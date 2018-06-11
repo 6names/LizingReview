@@ -412,6 +412,27 @@ a.red-butn {
     width: calc(67.3% - 25px);
     margin-top: 40px;
     margin-bottom: 40px; }
+    .main__content_wide {
+      width: 100%; }
+  .main__title {
+    margin-bottom: 29px;
+    font-size: 44px;
+    font-family: "Bandera Pro", Arial, Helvetica, sans-serif;
+    line-height: 1.05em;
+    color: #d42032; }
+    .main__title + .article__data,
+    .main__title + .article__event-data {
+      border-top: 1px solid #efefef; }
+  .main__holder {
+    position: relative; }
+    .main__holder-inner {
+      position: relative;
+      max-width: 1208px;
+      padding-left: 30px;
+      padding-right: 30px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 40px; }
 
 .sidebar__butn {
   width: 100%;
@@ -441,6 +462,28 @@ a.red-butn {
 
 .ui-icons {
   display: none; }
+
+.site-map {
+  font-size: 19px;
+  line-height: 1.4em;
+  color: #535555;
+  font-weight: 600; }
+  .site-map a {
+    color: #000000;
+    text-decoration: underline; }
+    .site-map a:hover {
+      color: #d42032;
+      text-decoration: none; }
+  .site-map > li {
+    margin-bottom: 5px; }
+    .site-map > li > ul {
+      margin-top: 5px;
+      margin-bottom: 15px;
+      margin-left: 15px; }
+      .site-map > li > ul a {
+        color: #535555; }
+        .site-map > li > ul a:hover {
+          color: #d42032; }
 
 .site-links {
   padding: 100px 0; }
@@ -1166,9 +1209,6 @@ a.red-butn {
     font-family: "Bandera Pro", Arial, Helvetica, sans-serif;
     line-height: 1.05em;
     color: #d42032; }
-    .article__title + .article__data,
-    .article__title + .article__event-data {
-      border-top: 1px solid #efefef; }
   .article__data {
     display: flex;
     align-items: center;
@@ -1536,7 +1576,7 @@ a.red-butn {
     margin-bottom: 30px;
     font-size: 34px;
     border-top: 1px solid #d9d9d9; }
-  .error-block [class*="butn"] {
+  .error-block__butn {
     width: 100%;
     max-width: 175px; }
 
@@ -1563,7 +1603,7 @@ a.red-butn {
       display: inline-block; }
     .contacts__item:not(:first-child) {
       margin-top: 10px; }
-  .contacts [class*="butn"] {
+  .contacts__butn {
     width: 100%;
     max-width: 175px; }
 
@@ -1703,7 +1743,7 @@ a.red-butn {
       background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAATCAYAAABobNZCAAAB+klEQVRIiaXVT4hNYRjH8c+9ZKWkmEmG5i6ocZRy7YSoQSaRsLGZhQ0LhZI/KQtqhoUF2ZMVFtLEMDT+FU2dou6VhTpSUkhMxpRmYnHures6595z7zyb03l/z/t83+d9z/m9uVL3ajVxEnMrz0wRRGGmvHKhOA83cSSIwhLkK1oOp3EOJ3A8KzwjuANP0It75UKxUIXncRlnavLP4lTN4mYCXohhrKoMdeFZuVDsmY3zOFg3Z1ZlAVMYnAG4E0+xvE5ajBvVrt+kzB/AUW3sQLlQXIKHCWD4hcE83mMzSil1LuBQi+D5eISVKSn7gii8Xu3oIzbgbUJiDhdxOCO4G8+xLEGewJ4gCm/z73Z+wxa8Sqk7gANNwAswhBUJ8jT6gyi8VR2oP8sP2Ih3CZPn4EraAipnPIYgQZ7CjlpwEhy+Yx3S3OMS9ouPowruEv9OhYT8SezF3XohV+dwtdGBx+hJ0P6gH9fQKe54aUqdviAK/wPT+Bf6jLV4naDlcBXHMJICHse2NDCNO6/GItzBmmaJNTGNnUEUDjVKymIen7Be8g4kxU9xxw3BWeHEH00vXjbJm8LuIAofZCnaim1+wVbpPjAp7vh+1oKtevYPsROO1Y1PYFcQhSOtFGvnyhxHH15U3n9jexCFw60Wave+/opNGBU712g7Rf4CsNKDY+k/gLgAAAAASUVORK5CYII=");
       background-size: 10px 6px;
       transition: all 0.2s; }
-    .select__value-active:before {
+    .select__value_active:before {
       transform: translate3d(0, -3px, 0) rotate(180deg); }
   .select.error .select__value {
     border-color: #d42032; }
@@ -1720,7 +1760,7 @@ a.red-butn {
     overflow-x: hidden;
     overflow-y: auto;
     box-shadow: 0 1px 7px rgba(0, 0, 0, 0.3); }
-    .select__list-active {
+    .select__list_active {
       display: block; }
   .select__option {
     padding-top: 5px;
@@ -1731,7 +1771,7 @@ a.red-butn {
     transition: all 0.2s; }
     .select__option:hover {
       background: rgba(0, 0, 0, 0.1); }
-    .select__option-active:hover, .select__option-active {
+    .select__option_active:hover, .select__option_active {
       background: #d42032;
       color: #ffffff;
       cursor: default; }
@@ -2135,9 +2175,12 @@ a.red-butn {
   z-index: 999;
   max-height: 100%;
   overflow: auto;
+  opacity: 0;
   -webkit-overflow-scrolling: touch; }
+  .modal:not(.visually-hidden) {
+    opacity: 1;
+    transition: 0.5s; }
   .modal-holder {
-    background: rgba(0, 0, 0, 0.5);
     opacity: 0;
     transition: opacity 0.35s; }
     .modal-holder_active {
@@ -2175,7 +2218,8 @@ a.red-butn {
     width: 100%;
     height: 100%;
     min-width: 100%;
-    min-height: 100%; }
+    min-height: 100%;
+    background: rgba(0, 0, 0, 0.5); }
     .modal__close_wide:before {
       position: absolute;
       content: '';
@@ -2288,6 +2332,12 @@ a.red-butn {
       .main__inner {
         padding-left: 15px;
         padding-right: 15px; }
+      .main__title {
+        margin-bottom: 15px;
+        font-size: 36px; }
+        .main__holder-inner {
+          padding-left: 15px;
+          padding-right: 15px; }
     .main {
       padding-top: 45px; }
       .main__sidebar {
@@ -2296,6 +2346,8 @@ a.red-butn {
       .main__content {
         margin-top: 20px;
         width: calc(70% - 10px); }
+        .main__content_wide {
+          width: 100%; }
       .header__top {
         padding-left: 15px;
         padding-right: 15px; }
@@ -2600,6 +2652,9 @@ a.red-butn {
     .main__content {
       margin-top: 0;
       width: 100%; }
+    .main__holder {
+      padding-left: 15px;
+      padding-right: 15px; }
     .sidebar__butn {
       margin-top: 26px;
       margin-bottom: 38px; }
@@ -2628,12 +2683,6 @@ a.red-butn {
           margin-bottom: 30px; }
       .posts__search-request {
         margin-bottom: 30px; }
-    .article__data, .article__figure-caption, .article__event-data {
-      margin-left: 15px;
-      margin-right: 15px; }
-    .article__buttons, .article__content, .article__title {
-      padding-left: 15px;
-      padding-right: 15px; }
   .vacancy {
     padding-left: 15px;
     padding-right: 15px; }
@@ -2658,10 +2707,7 @@ a.red-butn {
       padding-right: 15px; }
       .contacts .breadcrumbs {
         padding-left: 0;
-        padding-right: 0; }
-  .accordion__title {
-    margin-left: 15px;
-    margin-right: 15px; } }
+        padding-right: 0; } }
   @media only screen and (max-width: 768px) {
     .magazine__list .sidebar-banner,
     .magazine__list .magazine-preview {
@@ -2703,6 +2749,9 @@ a.red-butn {
     font-size: 18px; }
     .tariff {
       margin-bottom: 20px; }
+      .main__title {
+        margin-bottom: 10px;
+        font-size: 24px; }
     .main {
       padding-bottom: 0; }
       .main__sidebar {
@@ -2716,6 +2765,9 @@ a.red-butn {
       .main__sidebar {
         padding-left: 0;
         padding-right: 0; }
+    .site-map {
+      font-size: 16px;
+      line-height: 1.35em; }
     .sidebar-banner {
       margin-bottom: 40px;
       padding-left: 15px;
